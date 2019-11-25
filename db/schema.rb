@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_152557) do
+ActiveRecord::Schema.define(version: 2019_11_25_165430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applications", force: :cascade do |t|
+    t.string "status"
+    t.bigint "user_id"
+    t.string "job_title"
+    t.string "company_name"
+    t.string "recruiter_name"
+    t.string "recruiter_email"
+    t.boolean "favorite"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_applications_on_user_id"
+  end
+
+  create_table "interviews", force: :cascade do |t|
+    t.bigint "application_id"
+    t.datetime "date"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["application_id"], name: "index_interviews_on_application_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +49,6 @@ ActiveRecord::Schema.define(version: 2019_11_25_152557) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "applications", "users"
+  add_foreign_key "interviews", "applications"
 end
