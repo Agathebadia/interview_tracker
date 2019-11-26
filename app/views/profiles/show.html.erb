@@ -1,15 +1,18 @@
-<!-- Render cards -->
+<!-- Render cards with instance and their value -->
 
 <div class="card-product">
   <div class="card-product-infos">
-    <h2> <%= @application.company_name %></h2>
-    <!-- INSERT HEART ICON! and its path to favorite -->
+    <h2>Company</h2>
+    <div class="details">
     <div class="application-details">
-    <p> <%= @application.job_title %></p>
-    <p> <%= @application.status %></p>
+    <p>Job title</p>
+    <p>Status</p>
     </div>
     <div class="interview-details">
-      <p> Next interview: <%= @interview.date %></p>
+    <p>Next interview</p>
     </div>
   </div>
+  </div>
 </div>
+
+
