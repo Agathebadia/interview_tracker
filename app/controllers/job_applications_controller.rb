@@ -1,32 +1,33 @@
 class JobApplicationsController < ApplicationController
 
+  def show
+    @job_application = JobApplication.find(params[:id])
+  end
+
   def new
     @job_application = JobApplication.new
-    #authorize @application
   end
 
 
   def create
     @job_application = JobApplication.new(job_application_params)
-    #authorize @application
-
     @job_application.user_id = current_user.id
     if @job_application.save
-      redirect_to :home #@application redirect to different page later
+      redirect_to @job_application
     else
-      render :new #
+      render :new
     end
   end
 
   def edit
-    @job_application = JobApplication.find
+    @job_application = JobApplication.find(params[:id])
   end
 
   def update
     @job_application = JobApplication.find(params[:id])
     @job_application.update(job_application_params)
     if @job_application.save!
-      redirect_to @job_application
+      redirect_to profile_path(current_user)
     else
       render :edit
     end
