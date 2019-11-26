@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2019_11_26_132552) do
 
   # These are extensions that must be enabled in order to support this database
@@ -63,4 +62,5 @@ ActiveRecord::Schema.define(version: 2019_11_26_132552) do
 
   add_foreign_key "interviews", "job_applications"
   add_foreign_key "job_applications", "users"
+  add_foreign_key "profiles", "users"
 end
