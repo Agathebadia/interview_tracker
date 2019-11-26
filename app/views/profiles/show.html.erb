@@ -1,5 +1,7 @@
 <!-- Render cards with instance and their value -->
 
+<%= link_to "Start a new application", new_job_application_path %>
+
 <% @job_applications.each do |job_application| %>
 <div class="card-product">
   <div class="card-product-infos">
@@ -11,6 +13,7 @@
     </div>
     <div class="interview-details">
     <p> @interview.date </p>
+    <p><%= link_to "Edit", edit_job_application_path %></p>
     </div>
   </div>
   </div>
