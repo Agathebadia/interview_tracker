@@ -1,0 +1,15 @@
+<!-- Render cards -->
+
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2> <%= @application.company_name %></h2>
+    <!-- INSERT HEART ICON! and its path to favorite -->
+    <div class="application-details">
+    <p> <%= @application.job_title %></p>
+    <p> <%= @application.status %></p>
+    </div>
+    <div class="interview-details">
+      <p> Next interview: <%= @interview.date %></p>
+    </div>
+  </div>
+</div>
