@@ -1,0 +1,20 @@
+<!-- Render cards with instance and their value -->
+
+<% @job_applications.each do |job_application| %>
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2><%= job_application.company_name %></h2>
+    <div class="details">
+    <div class="application-details">
+    <p>Job title: <%= job_application.job_title %></p>
+    <p> Status: <%= job_application.status %></p>
+    </div>
+    <div class="interview-details">
+    <p> @interview.date </p>
+    </div>
+  </div>
+  </div>
+</div>
+<% end %>
+
+
