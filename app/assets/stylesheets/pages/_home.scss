@@ -10,24 +10,13 @@
   font-size: 38px;
   padding-left: 120px;
 }
-
-// .banner h2 {
-//  padding-left: 120px;
-// }
-.banner p {
-  font-size: 30px;
-  font-style: italic;
-  font-weight: lighter;
-  opacity: 0.8;
-}
-
 #banner-h2-1 {
   padding-left: 120px;
 }
 
-#banner-h2-2 {
-
-}
+// .banner h2 {
+//  padding-left: 120px;
+// }
 
 .container-1 {
   width: 700px;
@@ -38,9 +27,26 @@
 .container-2 {
   width: 700px;
   margin: 50px auto;
-  padding-left: 120px;
+  line-height: 35px;
+  padding-left: 240px;
 }
 
+// .container-2 p {
+//   font-size: 20px;
+//   font-style: italic;
+//   font-weight: lighter;
+//   opacity: 0.8;
+//   padding-left: 120px;
+// }
+
+.ul {
+  padding-left: 120px;
+  // line-height: 35px;
+}
+
+// #description-h2 {
+//   padding-left: 120px;
+// }
 
 /* Media queries */
 @media(max-width: 992px) {
