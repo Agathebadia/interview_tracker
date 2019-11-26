@@ -1,0 +1,23 @@
+
+<%= form_for(@job_application) do |f| %>
+  <%= f.label :job_title %>
+  <%= f.text_field :job_title %>
+<p></p>
+  <%= f.label :company_name %>
+  <%= f.text_field :company_name %>
+<p></p>
+  <%= f.label :recruiter_name %>
+  <%= f.text_field :recruiter_name %>
+<p></p>
+  <%= f.label :recruiter_email %>
+  <%= f.text_field :recruiter_email %>
+
+
+
+
+  <%= f.submit %>
+<% end %>
+
+
+
+

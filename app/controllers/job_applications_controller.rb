@@ -10,8 +10,8 @@ class JobApplicationsController < ApplicationController
     #authorize @application
 
     @job_application.user_id = current_user.id
-    if @application.save
-      redirect_to :home #@application redirect to different page later
+    if @job_application.save
+      redirect_to root_url # later job_application_path
     else
       render :new #
     end
