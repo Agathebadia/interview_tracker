@@ -1,4 +1,4 @@
-class Application < ApplicationRecord
+class JobApplication < ApplicationRecord
   belongs_to :user
   has_many :interviews
 
