@@ -4,7 +4,7 @@
 <div class="interview_info">
 <%= form_for([@job_application, @interview]) do |f| %>
   <%= f.label :date %>
-  <%= f.text_field :date %>
+  <%= f.input :date, label_html: as: :string,  input_html: { class: "datepicker"} %>
 <p></p>
   <%= f.label :description %>
   <%= f.text_field :description %>
@@ -19,3 +19,4 @@
 </div>
 </div>
 <% end %>
+ap
