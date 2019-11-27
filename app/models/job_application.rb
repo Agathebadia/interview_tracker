@@ -1,6 +1,6 @@
 class JobApplication < ApplicationRecord
   belongs_to :user
-  has_many :interviews
+  has_many :interviews, dependent: :destroy
 
   validates :favorites, default: false
 
