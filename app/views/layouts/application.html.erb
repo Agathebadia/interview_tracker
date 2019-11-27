@@ -11,8 +11,13 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="wrapper">
+      <% unless  params[:controller] == "pages" && params[:action] == "home" %>
+        <%= render 'shared/sidebar' %>
+      <% end %>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

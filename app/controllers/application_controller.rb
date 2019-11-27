@@ -10,3 +10,4 @@ class ApplicationController < ActionController::Base
     profile_path(resource)
   end
 end
+
