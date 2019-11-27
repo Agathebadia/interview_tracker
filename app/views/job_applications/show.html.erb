@@ -1,6 +1,24 @@
-<%= @job_application.company_name %>
-<%= @job_application.job_title %>
-<%= @job_application.recruiter_name %>
-<%= @job_application.recruiter_email %>
+<h1><%= @job_application.company_name %></h1>
+
+<div class="job-application-show">
+<div class="job-application_info">
+<h1>Your job application</h1>
+<p>Company: <%= @job_application.company_name %></p>
+<p>Job title: <%= @job_application.job_title %></p>
+<p>Recruiter's name: <%= @job_application.recruiter_name %></p>
+<p>Recruiter's email: <%= @job_application.recruiter_email %></p>
 
 <%= link_to "Edit", edit_job_application_path %>
+</div>
+
+<div class="interview_info">
+<h1>Your interviews</h1>
+<p>Interview status:</p>
+<p>interview.date</p>
+<p>@interview.interviewer_name</p>
+<p>@interview.interviewer_email</p>
+
+<%= link_to "Update",  %>
+</div>
+</div>
+

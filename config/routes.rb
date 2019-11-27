@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :job_applications, only: [:edit, :update, :create, :new, :show]
+  resources :job_applications, only: [:show] do
+    resources :interviews, only: [:edit, :update]
+  end
+
+  resources :job_applications, only: [:edit, :update, :create, :new]
   resources :profiles, only: [:show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmlr
