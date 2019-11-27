@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns:  1fr 5fr;
+  height: 100vh;
+
+  .sidenav {
+      background-color: #eaeaea;
+  }
+}
