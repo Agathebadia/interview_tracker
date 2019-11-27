@@ -1,13 +1,12 @@
 class JobApplicationsController < ApplicationController
-
-  def show
-    @job_application = JobApplication.find(params[:id])
-  end
-
-  def new
+ def new
     @job_application = JobApplication.new
   end
 
+  def show
+    @job_application = JobApplication.find(params[:id])
+    @interviews = @job_application.interviews
+  end
 
   def create
     @job_application = JobApplication.new(job_application_params)

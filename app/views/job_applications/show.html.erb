@@ -13,12 +13,15 @@
 
 <div class="interview_info">
 <h1>Your interviews</h1>
-<p>Interview status:</p>
-<p>interview.date</p>
-<p>@interview.interviewer_name</p>
-<p>@interview.interviewer_email</p>
 
-<%= link_to "Update",  %>
+<%= link_to "Add an interview", new_job_application_interview_path(@job_application) %>
+
+<div class="interview-card">
+<% @interviews.each do |interview| %>
+  <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> - Contact: <%= interview.interviewer_email %> - <%= link_to "Edit", edit_job_application_interview_path(@job_application) %>
+  <p><%= interview.description %></p>
+  <% end %>
+  </div>
 </div>
 </div>
 
