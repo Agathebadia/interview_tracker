@@ -3,4 +3,10 @@
 <%= @job_application.recruiter_name %>
 <%= @job_application.recruiter_email %>
 
-<%= link_to "Edit", edit_job_application_path %>
+
+<%= link_to edit_job_application_path do %><i class="far fa-edit"></i> <% end %>
+
+
+
+<%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt"></i><% end %>
+
