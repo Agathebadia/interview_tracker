@@ -1,23 +1,20 @@
+<div class="text-center">
 
 <%= form_for(@job_application) do |f| %>
-  <%= f.label :job_title %>
-  <%= f.text_field :job_title %>
+ <div><%= f.label :job_title %></div>
+  <div><%= f.text_field :job_title %></div>
 <p></p>
-  <%= f.label :company_name %>
-  <%= f.text_field :company_name %>
+  <div><%= f.label :company_name %></div>
+  <div><%= f.text_field :company_name %></div>
 <p></p>
-  <%= f.label :recruiter_name %>
-  <%= f.text_field :recruiter_name %>
+  <div><%= f.label :recruiter_name %></div>
+  <div><%= f.text_field :recruiter_name %></div>
 <p></p>
-  <%= f.label :recruiter_email %>
-  <%= f.text_field :recruiter_email %>
-
-
-
-
-  <%= f.submit %>
+  <div><%= f.label :recruiter_email %></div>
+  <div><%= f.text_field :recruiter_email %></div>
+  <p></p>
+  <div><%= f.submit %></div>
 <% end %>
 
-
-
+</div>
 
