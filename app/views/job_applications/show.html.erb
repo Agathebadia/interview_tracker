@@ -18,7 +18,8 @@
 
 <div class="interview-card">
 <% @interviews.each do |interview| %>
-  <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> - Contact: <%= interview.interviewer_email %> - <%= link_to "Edit", edit_job_application_interview_path(@job_application) %>
+  <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> - Contact: <%= interview.interviewer_email %> -
+    <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id)%>
   <p><%= interview.description %></p>
   <% end %>
   </div>

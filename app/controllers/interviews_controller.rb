@@ -1,6 +1,6 @@
 class InterviewsController < ApplicationController
   def show
-    @interview = Interview.find(params[:id])
+    @interview = Interview.find(params[:job_application_id])
   end
 
   def new
@@ -20,11 +20,13 @@ class InterviewsController < ApplicationController
   end
 
   def edit
-    @interview = Interview.find(params[:id])
+    @interview = Interview.find(params[:interview_id])
+    @job_application = @interview.job_application
   end
 
   def update
     @interview = Interview.find(params[:id])
+    @job_application = @interview.job_application
     @interview.update(interview_params)
     if @interview.save!
       redirect_to profile_path(current_user)
