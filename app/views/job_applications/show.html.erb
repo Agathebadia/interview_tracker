@@ -1,5 +1,7 @@
 <div class="job-application">
 
+  <div class="">
+
     <h1><%= @job_application.company_name %></h1>
     <h1>Your job application</h1>
     <p>Company: <%= @job_application.company_name %></p>
@@ -7,6 +9,7 @@
     <p>Recruiter's name: <%= @job_application.recruiter_name %></p>
     <p>Recruiter's email: <%= @job_application.recruiter_email %></p>
     <%= link_to "Edit", edit_job_application_path %>
+  </div>
 
 
   <h1>Your interviews</h1>

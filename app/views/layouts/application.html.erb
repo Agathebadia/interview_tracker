@@ -12,8 +12,9 @@
   </head>
   <body>
 
-    <div class="wrapper">
+      <%= render 'shared/navbar' %>
       <% unless  params[:controller] == "pages" && params[:action] == "home" %>
+    <div class="wrapper">
         <%= render 'shared/sidebar' %>
       <% end %>
       <%= render 'shared/flashes' %>
