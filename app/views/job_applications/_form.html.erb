@@ -1,5 +1,11 @@
+
 <div class="text-center">
 
+<h1><%= @job_application.company_name %></h1>
+
+
+<div class="job-application-show">
+<div class="job-application_info">
 <%= form_for(@job_application) do |f| %>
  <div><%= f.label :job_title %></div>
   <div><%= f.text_field :job_title %></div>
@@ -7,6 +13,9 @@
   <div><%= f.label :company_name %></div>
   <div><%= f.text_field :company_name %></div>
 <p></p>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
   <div><%= f.label :recruiter_name %></div>
   <div><%= f.text_field :recruiter_name %></div>
 <p></p>
@@ -17,4 +26,5 @@
 <% end %>
 
 </div>
+
 

@@ -1,7 +1,31 @@
-<%= @job_application.company_name %>
-<%= @job_application.job_title %>
-<%= @job_application.recruiter_name %>
-<%= @job_application.recruiter_email %>
+<h1><%= @job_application.company_name %></h1>
+
+<div class="job-application-show">
+<div class="job-application_info">
+<h1>Your job application</h1>
+<p>Company: <%= @job_application.company_name %></p>
+<p>Job title: <%= @job_application.job_title %></p>
+<p>Recruiter's name: <%= @job_application.recruiter_name %></p>
+<p>Recruiter's email: <%= @job_application.recruiter_email %></p>
+
+
+<%= link_to "Edit", edit_job_application_path %>
+</div>
+
+<div class="interview_info">
+<h1>Your interviews</h1>
+
+<%= link_to "Add an interview", new_job_application_interview_path(@job_application) %>
+
+<div class="interview-card">
+<% @interviews.each do |interview| %>
+  <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> - Contact: <%= interview.interviewer_email %> -
+    <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id)%>
+  <p><%= interview.description %></p>
+  <% end %>
+  </div>
+</div>
+</div>
 
 
 <%= link_to edit_job_application_path do %><i class="far fa-edit"></i> <% end %>
@@ -9,4 +33,5 @@
 
 
 <%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt"></i><% end %>
+
 
