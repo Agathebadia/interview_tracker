@@ -9,7 +9,7 @@
 
     <h1>Your job application</h1>
     <p>Job title: <%= @job_application.job_title %></p>
-    <p>Application status:<%= @job_application.status %></p>
+    <p>Application status: <%= @job_application.status %></p>
     <p>Recruiter's name: <%= @job_application.recruiter_name %></p>
     <p>Recruiter's email: <%= @job_application.recruiter_email %></p>
     <%= link_to edit_job_application_path do %><i class="far fa-edit"></i> <% end %>
