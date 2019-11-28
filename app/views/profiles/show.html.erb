@@ -1,9 +1,11 @@
 <!-- Render cards with instance and their value -->
 
+
 <div class="profile-content">
   <div class="profile-content-button">
     <%= link_to '<button type="button" class="default-button">Start a new application!</button>'.html_safe, new_job_application_path %>
   </div>
+
 
 
   <% @job_applications.each do |job_application| %>
@@ -12,6 +14,7 @@
     <div class="card-product-infos">
       <h2 id="company_name"><%= job_application.company_name %></h2>
       <div class="details">
+
         <div class="application-details">
           <p>Job title: <%= job_application.job_title %></p>
           <p> Status: <%= job_application.status %></p>

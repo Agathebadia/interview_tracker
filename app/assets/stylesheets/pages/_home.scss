@@ -80,15 +80,16 @@
 /* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
+  font-style: 'lato';
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #60646b;
 }
 
 /* Style page content */
