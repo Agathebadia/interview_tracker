@@ -6,14 +6,16 @@
 
   <div class="sidenav-text">
 
-<!--   <a href="/"><i class="fas fa-home"></i> Home</a>
- -->
+<!--   <a href="/"><i class="fas fa-home"></i> Home</a> -->
   <%= link_to root_path do %>
-    <i class="fas fa-home"></i> Home</a>
+
+    <span><i class="fas fa-home"></i> Home</span>
   <% end %>
+
   <%= link_to new_job_application_path do  %>
     <i class="fas fa-plus"></i><span> New Application</span>
   <% end %>
+
   <%#= link_to "  New application",  new_job_application_path, class: "fas fa-plus" %>
   <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a>
   </div>
