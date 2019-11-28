@@ -1,28 +1,36 @@
 // // Specific CSS for your home-page
 .banner {
-  background-image: url("https://source.unsplash.com/RYyr-k3Ysqg/1600x900");
+  background-image: asset-url("homepage-banner.jpg");
+
   // background-image: url("https://source.unsplash.com/1000x500/?office,work");
   background-size: cover;
   color: #000000  ;
-  padding: 60px 0;
+  padding: 0px 0;
+  min-height: 300px;
+
+  .sign-in-button {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
+
+.container-logo-h1 {
+    display: flex;
+    justify-content: center;
+  }
+
 .banner h1 {
   font-size: 38px;
-  padding-left: 120px;
+  color: #0B7DBA;
 }
 #banner-h2-1 {
-  padding-left: 120px;
+  color: #0B7DBA;
 }
 
 // .banner h2 {
 //  padding-left: 120px;
 // }
 
-.container-1 {
-  width: 700px;
-  margin: 50px auto;
-  padding-left: 120px;
-}
 
 .container-2 {
   width: 700px;
@@ -80,15 +88,15 @@
 /* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
+  font-style: 'lato';
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #60646b;
 }
 
 /* Style page content */

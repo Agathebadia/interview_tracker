@@ -5,14 +5,15 @@
   }
 
 .card-product {
-  width: 800px;
+  max-width: 700px;
+  margin: 20px auto;
+  position: relative;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: auto;
-  margin-top: 15px;
   border-radius: 4px;
 }
 
 .card-product-infos {
+  background-color: white;
   overflow: hidden;
   height: 120px;
   background: white;
@@ -46,3 +47,13 @@
   align-items: center;
 }
 
+#company_name {
+  color: #0B7DBA;
+  font-size: 20px;
+}
+
+#call-to-action {
+  color: #0B7DBA;
+  font-weight: bold;
+  opacity: 1;
+}

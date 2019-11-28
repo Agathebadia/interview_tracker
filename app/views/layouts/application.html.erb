@@ -10,11 +10,11 @@
     <%= stylesheet_link_tag 'application' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
 
-    <div class="wrapper">
+  <body>
       <% unless  params[:controller] == "pages" && params[:action] == "home" %>
-        <%= render 'shared/sidebar' %>
+    <div class="wrapper">
+      <%= render 'shared/sidebar' %>
       <% end %>
       <%= render 'shared/flashes' %>
       <%= yield %>

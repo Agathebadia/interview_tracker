@@ -1,0 +1,68 @@
+.profile-content-button {
+  display: flex;
+  justify-content: center;
+}
+
+
+.default-button {
+  margin: auto;
+  border: solid, 1px;
+  padding: 16px 20px;
+  color: white;
+  border-radius: 4px;
+  background-color: #0B7DBA;
+}
+
+.default-button:hover {
+  text-decoration: none;
+  background-color: #0a70a8;
+}
+
+.card-interview {
+
+  .default-button {
+  display: flex;
+  justify-content: center;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+
+  }
+}
+
+.job-application {
+
+  .default-button {
+    padding: 12px 15px;
+  }
+}
+
+.card-application-icons {
+  display: flex;
+  justify-content: space-between;
+
+#bin {
+  font-size: 30px;
+  color: #0B7DBA;
+  }
+
+#bin:hover {
+  color: #0a70a8;
+  }
+
+  #edit-icon {
+    font-size: 30px;
+    color: #0B7DBA;
+  }
+  #edit-icon:hover {
+  color: #0a70a8;
+  }
+}
+
+.banner {
+
+  .default-button{
+  margin: 10px 10px auto;
+  font-size: 25px;
+  padding: 5px 10px;
+  }
+}

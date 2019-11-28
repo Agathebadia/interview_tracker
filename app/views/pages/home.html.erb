@@ -7,25 +7,35 @@
   <p>Find me in app/views/pages/home.html.erb</p>
 </div> -->
 
+<!-- <div class="banner">
+  <h1 class="banner-title"><strong>Application Tracker 💻</strong></h1>
+</div>
+ -->
+<!-- <div>
+  <h1>Pages#home</h1>
+  <p>Find me in app/views/pages/home.html.erb</p>
+</div> -->
+
 
 <div class="banner">
+  <div class="sign-in-button">
+<%= link_to '<button type="button" class="default-button">Log in</button>'.html_safe, new_user_session_path %>
+</div>
+  <div class="container-logo-h1"><%= image_tag("meditation.png", class: 'logo') %>
   <div class="container-1">
-    <h1><strong>Application Tracker 💻</strong></h1>
-    <h2 id="banner-h2-1">All your interviews under control</h2>
+  <h1><strong>YOJA</strong></h1>
+    <h2 id="banner-h2-1">Your Optimized Job Applications</h2>
   </div>
+</div>
 </div>
 
 <div class="white-card">
   <div class="container-2">
-    <h2 id="description-h2">Why use Application Tracker</h2>
+    <h2 id="description-h2">Why use Yoja?</h2>
     <ul>
-      <li>Stop struggling with applications/interviews tracking and management</li>
-      <li>Have an interview tracker, to optimize your application from A to Z</li>
-      <li>Have all your applications in one place</li>
-      <li>Be well organised</li>
-      <li>Make your mother proud</li>
+      <li>Optimize your job application tracking from A to Z </li>
+      <li>To manage your job applications easily</li>
+      <li>To be a relaxed and serene job-seeker</li>
     </ul>
   </div>
 </div>
-
-

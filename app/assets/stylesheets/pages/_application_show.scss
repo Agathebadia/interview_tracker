@@ -1,8 +1,59 @@
-h1 {
+body {
+  background-color: #F0F5F8;
+}
+
+.job-application {
+  padding: 20px;
+}
+
+.logo {
+  image: asset-url('meditation.png')
+}
+
+.job-application h1 {
   text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.cards h1 {
+  background-color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .job-application-show {
   display:flex;
   justify-content: space-around;
 }
+
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-interview {
+  background-color: white;
+  margin: auto;
+  min-height: 322px;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-application {
+  background-color: white;
+  margin: auto;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+p {
+  background-color: white;
+}
+
