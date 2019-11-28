@@ -1,6 +1,7 @@
 <!-- Render cards with instance and their value -->
 
 <div>
+
   <button><%= link_to "Start a new application", new_job_application_path %></button>
 
 
@@ -10,6 +11,7 @@
     <div class="card-product-infos">
       <h2 id="company_name"><%= job_application.company_name %></h2>
       <div class="details">
+
         <div class="application-details">
           <p>Job title: <%= job_application.job_title %></p>
           <p> Status: <%= job_application.status %></p>

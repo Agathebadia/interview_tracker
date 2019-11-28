@@ -1,3 +1,8 @@
+.avatar-large {
+  width: 56px;
+  border-radius: 50%;
+}
+
 .body {
   font-family: "Lato", sans-serif;
 }
@@ -6,6 +11,10 @@
   background-color: #eaeaea;
   overflow-x: hidden;
   padding-top: 20px;
+}
+
+.sidenav-text {
+  font-family: 'lato';
 }
 
 .sidenav a {

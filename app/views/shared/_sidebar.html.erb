@@ -1,9 +1,17 @@
 <div class="sidenav">
+  <div class="text-center ">
   <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-
   <a href="#profile">user_name</a>
+  </div>
+
+  <div class="sidenav-text">
+
   <a href="#"><i class="fas fa-home"></i> Home</a>
-  <a href="#new_application"><i class="fas fa-plus"> New Application</i></a>
-  <a href="#favorites"><i class="fas fa-heart"> Favorites</i></a>
+  <%= link_to new_job_application_path do  %>
+    <i class="fas fa-plus"></i><span> New Application</span>
+  <% end %>
+  <%#= link_to "  New application",  new_job_application_path, class: "fas fa-plus" %>
+  <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a>
+  </div>
 </div>
 
