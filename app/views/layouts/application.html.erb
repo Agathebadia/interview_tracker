@@ -15,7 +15,7 @@
 
       <% unless  params[:controller] == "pages" && params[:action] == "home" %>
     <div class="wrapper">
-        <%= render 'shared/sidebar' %>
+      <%= render 'shared/sidebar' %>
       <% end %>
       <%= render 'shared/flashes' %>
       <%= yield %>
