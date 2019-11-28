@@ -1,5 +1,19 @@
+body {
+  background-color: #F0F5F8;
+}
+
+
 h1 {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.cards h1 {
+  background-color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .job-application-show {
@@ -7,7 +21,28 @@ h1 {
   justify-content: space-around;
 }
 
-.interview-box {
-  background-color: white;
 
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-interview {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-application {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+p {
+  background-color: white;
 }

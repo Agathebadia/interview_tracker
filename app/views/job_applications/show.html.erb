@@ -1,17 +1,23 @@
 <div class="job-application">
 
-  <div class="">
 
-    <h1><%= @job_application.company_name %></h1>
+<h1><%= @job_application.company_name %></h1>
+
+
+<div class="cards">
+    <div class="card-application">
+
     <h1>Your job application</h1>
-    <p>Company: <%= @job_application.company_name %></p>
     <p>Job title: <%= @job_application.job_title %></p>
+    <p>Application status: <%= @job_application.status %></p>
     <p>Recruiter's name: <%= @job_application.recruiter_name %></p>
     <p>Recruiter's email: <%= @job_application.recruiter_email %></p>
-    <%= link_to "Edit", edit_job_application_path %>
+    <%= link_to edit_job_application_path do %><i class="far fa-edit"></i> <% end %>
   </div>
 
 
+
+<div class="card-interview">
   <h1>Your interviews</h1>
 
   <%= link_to "Add an interview", new_job_application_interview_path(@job_application) %>
@@ -23,11 +29,9 @@
       <p><%= interview.description %></p>
     </div>
     <% end %>
-  <%= link_to edit_job_application_path do %><i class="far fa-edit"></i> <% end %>
 
-  <%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt"></i><% end %>
 </div>
-
-
+</div>
+<%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt" id="bin"></i><% end %>
 
 

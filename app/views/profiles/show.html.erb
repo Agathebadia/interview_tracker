@@ -2,24 +2,33 @@
 
 <div>
 
+  <button><%= link_to "Start a new application", new_job_application_path %></button>
 
-<% @job_applications.each do |job_application| %>
-    <div class="card-product">
-<%= link_to "Start a new application", new_job_application_path %>
-      <%= link_to '', job_application, class: 'card-link' %>
-      <div class="card-product-infos">
-        <h2><%= job_application.company_name %></h2>
-        <div class="details">
+
+  <% @job_applications.each do |job_application| %>
+  <div class="card-product">
+    <%= link_to '', job_application_path(job_application), class: 'card-link' %>
+    <div class="card-product-infos">
+      <h2 id="company_name"><%= job_application.company_name %></h2>
+      <div class="details">
+
         <div class="application-details">
-        <p>Job title: <%= job_application.job_title %></p>
-        <p> Status: <%= job_application.status %></p>
+          <p>Job title: <%= job_application.job_title %></p>
+          <p> Status: <%= job_application.status %></p>
         </div>
         <div class="interview-details">
-        <p>  NEED TO DISPLAY LAST INTERVIEW DATE HERE </p>
+          <% if job_application.interviews.empty?  %>
+          <p id="call-to-action"> Add your next interview date! </p>
+          <% elsif  job_application.interviews.last.date > Date.today %>
+          <p>  Next interview: <%= job_application.interviews.last.date %> </p>
+          <% else %>
+          <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(@job_application) %></p>
+          <% end %>
         </div>
       </div>
-      </div>
     </div>
-<% end %>
+  </div>
+  <% end %>
 </div>
+
 
