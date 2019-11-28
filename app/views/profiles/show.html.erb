@@ -1,12 +1,12 @@
 <!-- Render cards with instance and their value -->
 
 <div>
-  <%= link_to "Start a new application", new_job_application_path %>
+  <button><%= link_to "Start a new application", new_job_application_path %></button>
 
 
   <% @job_applications.each do |job_application| %>
   <div class="card-product">
-    <%= link_to '', job_application, class: 'card-link' %>
+    <%= link_to '', job_application_path(job_application), class: 'card-link' %>
     <div class="card-product-infos">
       <h2 id="company_name"><%= job_application.company_name %></h2>
       <div class="details">
@@ -20,7 +20,7 @@
           <% elsif  job_application.interviews.last.date > Date.today %>
           <p>  Next interview: <%= job_application.interviews.last.date %> </p>
           <% else %>
-           <p id="call-to-action"> Add your next interview date! </p>
+          <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(@job_application) %></p>
           <% end %>
         </div>
       </div>
@@ -28,4 +28,5 @@
   </div>
   <% end %>
 </div>
+
 
