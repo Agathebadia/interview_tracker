@@ -1,5 +1,6 @@
 <div class="job-application">
 
+<%= link_to '<button type="button" class="default-button">Back to the dashboard</button>'.html_safe, profile_path(current_user) %>
 
 <h1><%= @job_application.company_name %></h1>
 
@@ -20,7 +21,7 @@
 <div class="card-interview">
   <h1>Your interviews</h1>
 
-  <%= link_to "Add an interview", new_job_application_interview_path(@job_application) %>
+  <%= link_to '<button type="button" class="default-button">Add an interview</button>'.html_safe, new_job_application_interview_path(@job_application) %>
 
   <% @interviews.each do |interview| %>
    <div class="interview-box">
@@ -34,4 +35,4 @@
 </div>
 <%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt" id="bin"></i><% end %>
 
-
+</div>
