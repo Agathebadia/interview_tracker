@@ -1,4 +1,32 @@
- .logo img {
-   min-width: 50px;
+ .profile-content-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 15px;
+ }
+
+ img.logo {
+   max-width: 100px;
    height: auto;
 }
+
+.button-logo-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-content-logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-interview-content-logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-interview-content-logo {
+  display: flex;
+  justify-content: space-between;
+}
+

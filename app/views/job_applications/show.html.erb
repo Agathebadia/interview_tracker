@@ -1,6 +1,9 @@
 <div class="job-application">
 
+<div class="button-logo-display">
 <%= link_to '<button type="button" class="default-button">Back to the dashboard</button>'.html_safe, profile_path(current_user) %>
+    <%= image_tag("meditation.png", class: 'logo') %>
+</div>
 
 <h1><%= @job_application.company_name %></h1>
 
