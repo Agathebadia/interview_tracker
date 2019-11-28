@@ -1,3 +1,11 @@
-<h1>Job #create</h1>
-<p>Find me in app/views/tools/new.html.erb</p>
-<%= render 'form', job_application: @job_application %>
+
+
+<div class='main-container'>
+  <h1 class="text-center" style="background-color: #818181; padding: 40px;">Your new application</h1>
+  <div class="formular-container">
+      <%= render 'form', job_application: @job_application %>
+      <div class="bild">
+        <%= image_tag("meditation_job.png",height: '100', width: '100') %>
+      </div>
+  </div>
+</div>
