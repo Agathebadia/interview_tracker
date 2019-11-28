@@ -14,16 +14,8 @@
   <div><%= f.text_field :company_name %></div>
 <p></p>
 
-  <%= f.label :status %>
-  <select id = "status-list">
-  <option value = "1" %>Applied</option>
-  <option value = "2" %>Interviewing</option>
-  <option value = "3" %>Technical assignment</option>
-  <option value = "4" %>Management interview</option>
-  <option value = "5" %>Offer</option>
-  <option value = "6" %>Hired</option>
-  <option value = "7" %>Closed</option>
-  </select>
+ <%= f.label :status %>
+  <%= f.select :status, ['Applied', 'Interviewing', 'Technical assignment', 'Management interview', 'Offer', 'Hired', 'Closed'] %>
   <div><%= f.label :recruiter_name %></div>
   <div><%= f.text_field :recruiter_name %></div>
 <p></p>
