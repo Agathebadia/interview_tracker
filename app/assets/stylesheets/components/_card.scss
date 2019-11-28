@@ -5,11 +5,10 @@
   }
 
 .card-product {
+  max-width: 700px;
+  margin: 20px auto;
   position: relative;
-  width: 800px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: auto;
-  margin-top: 15px;
   border-radius: 4px;
 }
 
