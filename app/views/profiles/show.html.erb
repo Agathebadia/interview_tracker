@@ -1,11 +1,11 @@
 <!-- Render cards with instance and their value -->
 
 <div>
-<%= link_to "Start a new application", new_job_application_path %>
 
 
 <% @job_applications.each do |job_application| %>
     <div class="card-product">
+<%= link_to "Start a new application", new_job_application_path %>
       <%= link_to '', job_application, class: 'card-link' %>
       <div class="card-product-infos">
         <h2><%= job_application.company_name %></h2>
