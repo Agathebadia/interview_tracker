@@ -1,14 +1,20 @@
-.button a {
+.profile-content-button {
+  display: flex;
+  justify-content: center;
+}
+
+
+.default-button {
 
   margin: auto;
   border: solid, 1px;
-  padding: 4px 4px 4px 4px;
+  padding: 16px 20px;
   color: white;
   border-radius: 4px;
   background-color: #0B7DBA;
 }
 
-.button a:hover {
+.default-button:hover {
   text-decoration: none;
-  background-color: #199ee5;
+  background-color: #0a70a8;
 }

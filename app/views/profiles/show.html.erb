@@ -1,7 +1,9 @@
 <!-- Render cards with instance and their value -->
 
-<div>
-  <span class="button"><%= link_to "Start a new application", new_job_application_path %></span>
+<div class="profile-content">
+  <div class="profile-content-button">
+    <%= link_to '<button type="button" class="default-button">Start a new application!</button>'.html_safe, new_job_application_path %>
+  </div>
 
 
   <% @job_applications.each do |job_application| %>
