@@ -22,6 +22,38 @@
 .card-interview {
 
   .default-button {
-  padding: 12px 15px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 10px;
+
+  }
+}
+
+.job-application {
+
+  .default-button {
+    padding: 12px 15px;
+  }
+}
+
+.card-application-icons {
+  display: flex;
+  justify-content: space-between;
+
+#bin {
+  font-size: 30px;
+  color: #0B7DBA;
+  }
+
+#bin:hover {
+  color: #0a70a8;
+  }
+
+  #edit-icon {
+    font-size: 30px;
+    color: #0B7DBA;
+  }
+  #edit-icon:hover {
+  color: #0a70a8;
   }
 }

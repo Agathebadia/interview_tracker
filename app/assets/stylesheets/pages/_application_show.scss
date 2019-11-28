@@ -33,6 +33,8 @@ body {
 .card-interview {
   background-color: white;
   margin: auto;
+  min-height: 322px;
+  max-width: 500px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -41,6 +43,7 @@ body {
 .card-application {
   background-color: white;
   margin: auto;
+  max-width: 500px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
