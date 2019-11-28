@@ -1,6 +1,8 @@
 <div class="job-application">
 
+
 <h1><%= @job_application.company_name %></h1>
+
 
 <div class="cards">
     <div class="card-application">
@@ -27,12 +29,9 @@
       <p><%= interview.description %></p>
     </div>
     <% end %>
-  <%= link_to edit_job_application_path do %><i class="far fa-edit"></i> <% end %>
-  </div>
-  <%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt"></i><% end %>
+
 </div>
 </div>
-
-
+<%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt" id="bin"></i><% end %>
 
 
