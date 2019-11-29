@@ -12,8 +12,9 @@
   <div><%= f.label :company_name %></div>
   <div><%= f.text_field :company_name %></div>
 <p></p>
- <%= f.label :status %>
-  <%= f.select :status, ['Applied', 'Interviewing', 'Technical assignment', 'Management interview', 'Offer', 'Hired', 'Closed'] %>
+  <div><%= f.label :status %></div>
+  <div><%= f.select :status, ['Applied', 'Interviewing', 'Technical assignment', 'Management interview', 'Offer', 'Hired', 'Closed'] %></div>
+<p></p>
   <div><%= f.label :recruiter_name %></div>
   <div><%= f.text_field :recruiter_name %></div>
 <p></p>
