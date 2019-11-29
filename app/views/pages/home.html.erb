@@ -1,7 +1,7 @@
 <!-- <div class="banner">
   <h1 class="banner-title"><strong>Application Tracker 💻</strong></h1>
 </div>
- -->
+-->
 <!-- <div>
   <h1>Pages#home</h1>
   <p>Find me in app/views/pages/home.html.erb</p>
@@ -10,7 +10,7 @@
 <!-- <div class="banner">
   <h1 class="banner-title"><strong>Application Tracker 💻</strong></h1>
 </div>
- -->
+-->
 <!-- <div>
   <h1>Pages#home</h1>
   <p>Find me in app/views/pages/home.html.erb</p>
@@ -19,23 +19,37 @@
 
 <div class="banner">
   <div class="sign-in-button">
-<%= link_to '<button type="button" class="default-button">Log in</button>'.html_safe, new_user_session_path %>
-</div>
-  <div class="container-logo-h1"><%= image_tag("meditation.png", class: 'logo') %>
-  <div class="container-1">
-  <h1><strong>YOJA</strong></h1>
-    <h2 id="banner-h2-1">Your Optimized Job Applications</h2>
+    <%= link_to '<button type="button" class="default-button">Log in</button>'.html_safe, new_user_session_path %>
   </div>
-</div>
+  <div class="container-logo-h1"><%= image_tag("meditation.png", class: 'logo') %>
+    <div class="container-1">
+      <h1><strong>OJA</strong></h1>
+      <h2 id="banner-h2-1">Optimized Job Applications</h2>
+    </div>
+  </div>
 </div>
 
 <div class="white-card">
+  <h2 id="what-is-oja">What is OJA?</h2>
+    <p id="oja-description">
+    OJA is your personal job application tracker. Here to help you through the job application process and management.
+    <br>
+    <br>Keep a track of all your job applications, easily.</p>
+    </div>
   <div class="container-2">
-    <h2 id="description-h2">Why use Yoja?</h2>
-    <ul>
-      <li>Optimize your job application tracking from A to Z </li>
-      <li>To manage your job applications easily</li>
-      <li>To be a relaxed and serene job-seeker</li>
-    </ul>
+    <h2 id="description-h2">Why use OJA?</h2>
+  </div>
+  <div class="info-container">
+    <div class="info-card"><%= image_tag("tracking.jpg", class: 'homepage-photo') %>
+      <p>Optimize your job application tracking from A to Z</p>
+    </div>
+    <div class="info-card"><%= image_tag("organisation.jpg", class: 'homepage-photo') %>
+      <p>Manage your job applications and organize your interviews easily</p>
+    </div>
+    <div class="info-card"><%= image_tag("relax.jpg", class: 'homepage-photo') %>
+      <p>Become a relaxed and serene job-seeker</p>
+    </div>
   </div>
 </div>
+
+<footer>OJA - Contact: contact@myoja.com</footer>
