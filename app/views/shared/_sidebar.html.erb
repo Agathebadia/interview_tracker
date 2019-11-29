@@ -1,7 +1,7 @@
 <div class="sidenav">
   <div class="text-center ">
   <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-  <a href="#profile">user_name</a>
+  <a href="#profile"><%= !current_user.profile.blank?  ? current_user.profile.first_name : "anonymous" %></a>
   </div>
 
   <div class="sidenav-text">
