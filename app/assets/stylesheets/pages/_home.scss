@@ -82,6 +82,22 @@
   }
 }
 
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.info-container img {
+  max-width: 300px;
+  border-radius: 4px;
+}
+
+.info-card p {
+background-color: #F0F5F8;
+ max-width: 300px;
+}
+
 /* The sidebar menu */
 
 
