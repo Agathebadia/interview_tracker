@@ -1,7 +1,6 @@
 // // Specific CSS for your home-page
 .banner {
-  background-image: asset-url("homepage-banner.jpg");
-
+  background-image: linear-gradient(100deg, rgba(0, 0, 0, 0.4), rgba(255,0,0,0) 70.71%), asset-url("homepage-banner.jpg");
   // background-image: url("https://source.unsplash.com/1000x500/?office,work");
   background-size: cover;
   color: #000000  ;
@@ -22,11 +21,35 @@
 .banner h1 {
   font-size: 38px;
   color: #0B7DBA;
+  text-shadow: 1px 1px 1px #000;
 }
 #banner-h2-1 {
   color: #0B7DBA;
+  text-shadow: 1px 1px 1px #000;
 }
 
+#description-h2 {
+  color: #0B7DBA;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#what-is-oja {
+  color: #0B7DBA;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#oja-description  {
+  font-size: 20px;
+  background-color: #F0F5F8;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 35px;
+}
 // .banner h2 {
 //  padding-left: 120px;
 // }
@@ -36,7 +59,6 @@
   width: 700px;
   margin: 50px auto;
   line-height: 35px;
-  padding-left: 240px;
 }
 
 // .container-2 p {
@@ -81,6 +103,40 @@
     font-size: 20px;
   }
 }
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 10px auto;
+  justify-items: center;
+}
+
+.info-container img {
+  max-width: 300px;
+  height: 200px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+
+.info-card p {
+  background-color: #F0F5F8;
+  max-width: 300px;
+  text-align: center;
+
+}
+
+footer {
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  max-height: 50px;
+  background-color: #0c8ace;
+  opacity: 0.8;
+}
+
 
 /* The sidebar menu */
 
