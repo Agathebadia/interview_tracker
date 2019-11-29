@@ -10,9 +10,9 @@
   <div class="sidenav-text">
 
 <!--   <a href="/"><i class="fas fa-home"></i> Home</a> -->
-  <%= link_to root_path do %>
+  <%= link_to profile_path(current_user) do %>
 
-    <span><i class="fas fa-home"></i> Home</span>
+    <span><i class="fas fa-home"></i> Dashboard</span>
   <% end %>
 
   <%= link_to new_job_application_path do  %>
