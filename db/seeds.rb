@@ -14,6 +14,7 @@ puts "Destroyed users"
 user = User.new(email: "anna@example.com", password: "123456")
 user.save!
 puts "User was created"
+Profile.create(first_name: "Anna", last_name: "Smith", user_id: user.id)
 
 job_opening1 = JobApplication.new(job_title: "Developer", company_name: "Zalando", recruiter_email: "azerty@example.com", status: "Interviewing", recruiter_name: "Sarah")
 
