@@ -1,7 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
 import "bootstrap";
-require("flatpickr/dist/themes/material_green.css");
+require("flatpickr/dist/themes/material_blue.css");
 
 
 flatpickr(".datepicker", {
