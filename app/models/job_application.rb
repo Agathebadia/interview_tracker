@@ -8,14 +8,11 @@ class JobApplication < ApplicationRecord
   validates :company_name, presence: true
   validates :recruiter_email, presence: true
 
-  def favorite!
-  self.favorite = true
-  self.save!
-end
+  def toggle_favorite!
+    self.favorite = !favorite
+    save!
+  end
 
-def unfavorite!
-  self.favorite = false
-  self.save!
-end
+  scope :favorites, -> { where(favorite: true) }
 end
 

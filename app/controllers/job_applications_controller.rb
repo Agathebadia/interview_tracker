@@ -1,5 +1,5 @@
 class JobApplicationsController < ApplicationController
- def new
+  def new
     @job_application = JobApplication.new
   end
 

@@ -6,9 +6,12 @@ Rails.application.routes.draw do
 
   resources :job_applications do
     resources :interviews, only: [:new, :create, :edit, :update]
+
+    patch :toggle_favorite, controller: :favorites
   end
 
   resources :profiles, only: [:show]
-  resources :favorites, only: [:create, :destroy]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmlr
+
+
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmlr
 end

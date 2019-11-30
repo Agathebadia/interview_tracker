@@ -21,7 +21,10 @@
   <% end %>
 
   <%#= link_to "  New application",  new_job_application_path, class: "fas fa-plus" %>
-  <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a>
+  <!-- <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a> -->
+  <%= link_to profile_path(current_user, favorite: 1) do %>
+    <i class="fas fa-heart"></i> Favorites
+  <% end %>
   <% end %>
   </div>
 </div>
