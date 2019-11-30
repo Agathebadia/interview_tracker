@@ -53,6 +53,11 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.title-heart-aligned{
+  display:flex;
+  justify-content: space-between;
+}
+
 p {
   background-color: white;
 }

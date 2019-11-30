@@ -12,7 +12,15 @@
   <div class="card-product">
     <%= link_to '', job_application_path(job_application), class: 'card-link' %>
     <div class="card-product-infos">
+      <div class="title-heart-aligned">
       <h2 id="company_name"><%= job_application.company_name %></h2>
+
+          <% if job_application.favorite? %>
+          <p><i class="fas fa-heart"></i></p>
+          <% else %>
+          <p><i class="far fa-heart"></i></p>
+          <% end %>
+          </div>
       <div class="details">
 
         <div class="application-details">
