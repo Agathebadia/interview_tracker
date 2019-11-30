@@ -42,6 +42,6 @@ def destroy
   private
 
   def job_application_params
-    params.require(:job_application).permit(:job_title, :company_name, :recruiter_name, :recruiter_email, :favorites, :status)
+    params.require(:job_application).permit(:job_title, :company_name, :recruiter_name, :recruiter_email, :favorite, :status)
   end
 end
