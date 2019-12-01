@@ -1,11 +1,36 @@
 <!-- Render cards with instance and their value -->
 
-
 <div class="profile-content">
+  <div class="tab-logo">
+  <div class="tabs">
+ <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Applied</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Interviewing</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Technical assignment</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Management interview</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Offer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Hire</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Closed</a>
+  </li>
+</ul>
+</div>
   <div class="profile-content-button">
     <%= image_tag("meditation.png", class: 'logo') %>
   </div>
-
+  </div>
 
 
   <% @job_applications.each do |job_application| %>
