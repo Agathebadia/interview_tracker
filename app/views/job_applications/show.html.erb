@@ -16,6 +16,7 @@
     <p>Application status: <%= @job_application.status %></p>
     <p>Recruiter's name: <%= @job_application.recruiter_name %></p>
     <p>Recruiter's email: <%= @job_application.recruiter_email %></p>
+    <p>Your impression: <%= @job_application.your_impression %></p>
       <div class="card-application-icons">
     <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i> <% end %>
     <%= link_to   job_application_path(@job_application), method: "delete" do %><i class="fas fa-trash-alt" id="bin"></i><% end %>
