@@ -1,4 +1,10 @@
-<h2>Sign up</h2>
+<div class='main-container'>
+  <h1 class="text-center" style="background-color: #3d9ae2; margin-top: 35px; padding: 40px;">Sign up</h1>
+
+  <div class="formular-container">
+ <div class="profile-content-button">
+    <%= image_tag("meditation.png", class: 'logo') %>
+</div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -7,19 +13,31 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: false,
+                placeholder: "E-mail",
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
+                label: false,
+                placeholder: "Password",
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: false,
+                placeholder: "Password Confirmation",
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-  <div class="form-actions">
+  <div>
+    <button type="button" class="btn-block button-blue">
     <%= f.button :submit, "Sign up" %>
+    </button>
+    <button type="button" class="btn-block button-blue" id="btn-enhanced">
+    <%= render "devise/shared/links" %>
+    </button>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+ </div>
+</div>
