@@ -1,4 +1,5 @@
 <div class='main-container'>
+
   <h1 class="text-center" style="background-color: #3d9ae2; margin-top: 35px; padding: 40px;">Log in
   </h1>
 
@@ -22,14 +23,15 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
+
   <div>
     <button type="button" class="btn-block button-blue">
+
     <%= f.button :submit, "Log in" %>
     </button>
 <%= render "devise/shared/links" %>
   </div>
 <% end %>
-
 
  </div>
 </div>

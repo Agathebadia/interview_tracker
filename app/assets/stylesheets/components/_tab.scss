@@ -1,0 +1,27 @@
+.tab-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs {
+
+}
+
+
+.nav-item a {
+  color: #0C7DBA;
+  padding: 4px 15px 2px;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+  color: #096496;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #07557f;
+}

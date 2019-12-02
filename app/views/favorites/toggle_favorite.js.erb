@@ -1,0 +1,17 @@
+// Use that handy `dom_id` from before to identify the correct
+// <article> on the index page and then grab its star <i>
+(function() {
+  let applicationId = '<%= dom_id(@job_application) %>'
+  let applicationFavorite = <%= @job_application.favorite? %>
+  let application = document.getElementById(applicationId)
+
+  let heart = application.querySelector('i.fa-heart')
+  heart.classList.remove('fas')
+  heart.classList.remove('far')
+
+  if (applicationFavorite) {
+    heart.classList.add('fas')
+  } else {
+    heart.classList.add('far')
+  }
+}())

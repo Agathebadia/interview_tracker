@@ -53,7 +53,25 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.title-heart-aligned{
+  display:flex;
+  justify-content: space-between;
+}
+
 p {
   background-color: white;
 }
 
+.interview-details p {
+  text-align: right;
+  //font-weight: bolder;
+}
+
+.date-attention {
+  color: #0a7dba;
+  font-weight: bold;
+}
+
+.title-heart-toggle {
+  z-index: 1;
+}
