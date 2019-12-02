@@ -16,5 +16,6 @@ class JobApplication < ApplicationRecord
   end
 
   scope :favorites, -> { where(favorite: true) }
+
 end
 

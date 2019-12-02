@@ -3,6 +3,9 @@ class ProfilesController < ApplicationController
 
   def show
     @job_applications = find_applications
+    # @job_applications = JobApplication.left_outer_joins(:interviews).order("interviews.date ASC")
+    @job_applications = JobApplication.includes(:interviews).order("interviews.date ASC")
+
     if params[:status] == "Applied"
       @job_applications = JobApplication.where(status: "Applied")
     elsif params[:status] == "Interviewing"
