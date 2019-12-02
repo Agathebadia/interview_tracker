@@ -1,32 +1,32 @@
 <!-- Render cards with instance and their value -->
-
+<% active = "active" %>
 <div class="profile-content">
   <div class="tab-logo">
   <div class="tabs">
  <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link"><%= link_to "Applied", profile_path(status: 'Applied') %></a>
+    <%= link_to "Applied", profile_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" ><%= link_to "Interviewing", profile_path(status: 'Interviewing') %></a>
+    <%= link_to "Interviewing", profile_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link"><%= link_to "Technical assignment", profile_path(status: 'Technical assignment') %></a>
+    <%= link_to "Technical assignment", profile_path(status: 'Technical assignment'), class:"nav-link #{active if params[:status] == 'Technical assignment'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link"><%= link_to "Management interview", profile_path(status: 'Management interview') %></a>
+    <%= link_to "Management interview", profile_path(status: 'Management interview'), class:"nav-link #{active if params[:status] == 'Management interview'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" ><%= link_to "Offer", profile_path(status: 'Offer') %></a>
+    <%= link_to "Offer", profile_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" ><%= link_to "Hired", profile_path(status: 'Hired') %></a>
+    <%= link_to "Hired", profile_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link"><%= link_to "Closed", profile_path(status: 'Closed') %></a>
+    <%= link_to "Closed", profile_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" %>
   </li>
   <li class="nav-item">
-    <a class="nav-link"><%= link_to "All", profile_path %></a>
+    <%= link_to "All", profile_path, class:"nav-link #{active if !params[:status]}" %>
   </li>
 </ul>
 </div>
