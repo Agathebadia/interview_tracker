@@ -1,12 +1,16 @@
-
 .formular-container {
   width: 666px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #eaeaea;
-  padding-top: 5px;
+  padding-top: 30px;
   padding-bottom: 25px;
+}
+
+.text-center {
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .main-container {
@@ -16,5 +20,5 @@
 .bild img {
   position: absolute;
   left: 685px;
-
 }
+
