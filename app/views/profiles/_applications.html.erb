@@ -1,5 +1,5 @@
 <% if applications.any? %>
-  <%= title %>
+  <div class="sub-titles"> <%= title %> </div>
   <% applications.each do |job_application| %>
     <div class="card-product">
       <%= link_to '', job_application_path(job_application), class: 'card-link' %>
