@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   def show
     @job_applications = find_applications
+
   end
 
   private
