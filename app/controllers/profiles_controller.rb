@@ -1,32 +1,27 @@
 class ProfilesController < ApplicationController
 
-
   def show
-    @job_applications = find_applications
-    if params[:status] == "Applied"
-      @job_applications = JobApplication.where(status: "Applied")
-    elsif params[:status] == "Interviewing"
-      @job_applications = JobApplication.where(status: "Interviewing")
-    elsif params[:status] == "Technical assignment"
-      @job_applications = JobApplication.where(status: "Technical assignment")
-    elsif params[:status] == "Management interview"
-      @job_applications = JobApplication.where(status: "Management interview")
-    elsif params[:status] == "Offer"
-      @job_applications = JobApplication.where(status: "Offer")
-    elsif params[:status] == "Hired"
-      @job_applications = JobApplication.where(status: "Hired")
-    elsif params[:status] == "Closed"
-      @job_applications = JobApplication.where(status: "Closed")
-    end
+    # @job_applications = JobApplication.left_outer_joins(:interviews).order("interviews.date ASC")
+    # @job_applications = JobApplication.includes(:interviews).order("interviews.date ASC")
+    @job_applications = current_user.job_applications
+    @job_applications = @job_applications.status(status) if status
+    @job_applications = @job_applications.favorites if favorite
+
+    upcoming_range = Time.zone.now..(1.week.from_now)
+    with_interviews = @job_applications.joins(:interviews)
+    @upcoming_interviews = with_interviews.where("interviews.date" => upcoming_range)
+    @with_interviews = with_interviews.where("interviews.date > ?", 1.week.from_now).where.not(id: @upcoming_interviews)
+
+    @no_interviews = @job_applications.left_outer_joins(:interviews).where(interviews: { job_application: nil })
   end
 
   private
 
-  def find_applications
-    if params.fetch(:favorite, false)
-      current_user.job_applications.favorites
-    else
-      current_user.job_applications
-    end
+  def favorite
+    params.fetch :favorite, false
+  end
+
+  def status
+    params.fetch :status, false
   end
 end
