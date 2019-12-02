@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations"}
   root to: 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     patch :toggle_favorite, controller: :favorites
   end
 
-  resources :profiles, only: [:show]
+  resources :profiles #, only: [:show]
 
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmlr
