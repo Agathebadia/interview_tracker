@@ -3,3 +3,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.nav-item a {
+  color: #0C7DBA;
+  padding: 4px 15px 2px;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+  color: #096496;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+}
