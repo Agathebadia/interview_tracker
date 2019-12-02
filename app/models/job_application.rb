@@ -8,7 +8,7 @@ class JobApplication < ApplicationRecord
   validates :company_name, presence: true
   validates :recruiter_email, presence: true
 
-  scope :status, -> (status) {where status: status}
+  scope :status, ->(status) {where status: status}
 
   def toggle_favorite!
     self.favorite = !favorite
