@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.tabs {
+
+}
+
+
 .nav-item a {
   color: #0C7DBA;
   padding: 4px 15px 2px;
@@ -17,3 +22,6 @@
   border-radius: 4px;
 }
 
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #07557f;
+}
