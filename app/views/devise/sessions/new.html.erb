@@ -1,7 +1,8 @@
 <div class='main-container'>
-  <h1 class="text-center" style="background-color: #3d9ae2; padding: 40px;">Log in</h1>
+  <h1 class="text-center" style="background-color: #3d9ae2; padding: 40px;">Log in
+  </h1>
 
-  <div class="formular-container">
+<div class="formular-container">
  <div class="profile-content-button">
     <%= image_tag("meditation.png", class: 'logo') %>
 </div>
@@ -9,17 +10,24 @@
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
+                label: false,
+                placeholder: "E-mail",
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
     <%= f.input :password,
+                label: false,
+                placeholder: "Password",
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
 
-  <div class="default-button">
-    <%= f.button :submit, "Log in" %>
+  <div>
+  <button type="button" class="btn-block button-blue">
+
+  <%= f.button :submit, "Log in" %>
+  </button>
   </div>
 <% end %>
 
