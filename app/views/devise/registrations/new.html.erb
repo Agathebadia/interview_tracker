@@ -29,12 +29,13 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
-
   <div>
     <button type="button" class="btn-block button-blue">
     <%= f.button :submit, "Sign up" %>
     </button>
-<%= render "devise/shared/links" %>
+    <button type="button" class="btn-block button-blue" id="btn-enhanced">
+    <%= render "devise/shared/links" %>
+    </button>
   </div>
 <% end %>
 
