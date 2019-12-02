@@ -1,4 +1,5 @@
 <div class='main-container'>
+
   <h1 class="text-center" style="background-color: #3d9ae2; margin-top: 35px; padding: 40px;">Sign up</h1>
 
   <div class="formular-container">
@@ -30,13 +31,15 @@
   </div>
 
   <div>
+    <!-- <button type="button" class="btn-block button-blue" id="btn-enhanced"> -->
     <button type="button" class="btn-block button-blue">
+
     <%= f.button :submit, "Sign up" %>
     </button>
-    <button type="button" class="btn-block button-blue" id="btn-enhanced">
-    <%= render "devise/shared/links" %>
-    </button>
+
   </div>
+    <%= render "devise/shared/links" %>
+    <!-- </button> -->
 <% end %>
 
  </div>
