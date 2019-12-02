@@ -2,74 +2,75 @@
 
 <div class="profile-content">
   <div class="tab-logo">
-  <div class="tabs">
- <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Applied</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" >Interviewing</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Technical assignment</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Management interview</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Offer</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Hire</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Closed</a>
-  </li>
-</ul>
-</div>
-  <div class="profile-content-button">
-    <%= image_tag("meditation.png", class: 'logo') %>
-  </div>
+    <div class="tabs">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Applied</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Interviewing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Technical assignment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Management interview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Offer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Closed</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-content-button">
+      <%= image_tag("meditation.png", class: 'logo') %>
+    </div>
   </div>
 
 
   <% @job_applications.each do |job_application| %>
-  <div class="card-product">
-    <%= link_to '', job_application_path(job_application), class: 'card-link' %>
-    <div class="card-product-infos">
-      <div class="title-heart-aligned">
-      <h2 id="company_name"><%= job_application.company_name %></h2>
+    <div class="card-product">
+      <%= link_to '', job_application_path(job_application), class: 'card-link' %>
+      <div class="card-product-infos">
+        <div class="title-heart-aligned">
+          <h2 id="company_name"><%= job_application.company_name %></h2>
           <article id="<%= dom_id(job_application) %>">
-          <p>
-            <%= link_to job_application_toggle_favorite_path(job_application), method: :patch, remote: true do %>
-              <% if job_application.favorite? %>
-                <i class="fas fa-heart"></i>
-              <% else %>
-                <i class="far fa-heart"></i>
+            <p>
+              <%= link_to job_application_toggle_favorite_path(job_application), method: :patch, remote: true do %>
+                <% if job_application.favorite? %>
+                  <i class="fas fa-heart"></i>
+                <% else %>
+                  <i class="far fa-heart"></i>
+                <% end %>
               <% end %>
-            <% end %>
-          </p>
+            </p>
           </article>
-          </div>
-
-      <div class="details">
-
-        <div class="application-details">
-          <p>Job title: <%= job_application.job_title %></p>
-          <p> Status: <%= job_application.status %></p>
         </div>
-        <div class="interview-details">
-          <% if job_application.interviews.empty?  %>
-          <p id="call-to-action"> Add your next interview date! </p>
-          <% elsif  job_application.interviews.last.date > Date.today %>
-          <p>  Next interview: <%= job_application.interviews.last.date %> </p>
-          <% else %>
-          <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(job_application) %></p>
-          <% end %>
+
+        <div class="details">
+
+          <div class="application-details">
+            <p>Job title: <%= job_application.job_title %></p>
+            <p> Status: <%= job_application.status %></p>
+          </div>
+          <div class="interview-details">
+            <% if job_application.interviews.empty? %>
+              <p id="call-to-action"> Add your next interview date! </p>
+            <% elsif job_application.interviews.last.date > Date.today %>
+              <p> Next interview: <%= job_application.interviews.last.date.strftime('%-A, %-b the %-d in %Y') %> </p>
+              <p> at <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
+            <% else %>
+              <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(job_application) %></p>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   <% end %>
 </div>
 
