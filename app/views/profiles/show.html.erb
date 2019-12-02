@@ -1,35 +1,40 @@
 <!-- Render cards with instance and their value -->
-
+<% active = "active" %>
 <div class="profile-content">
   <div class="tab-logo">
-    <div class="tabs">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Applied</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Interviewing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Technical assignment</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Management interview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Offer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hire</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Closed</a>
-        </li>
-      </ul>
-    </div>
-    <div class="profile-content-button">
-      <%= image_tag("meditation.png", class: 'logo') %>
-    </div>
+
+  <div class="tabs">
+ <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to "Applied", profile_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Interviewing", profile_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Technical assignment", profile_path(status: 'Technical assignment'), class:"nav-link #{active if params[:status] == 'Technical assignment'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Management interview", profile_path(status: 'Management interview'), class:"nav-link #{active if params[:status] == 'Management interview'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Offer", profile_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Hired", profile_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Closed", profile_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "All", profile_path, class:"nav-link #{active if !params[:status]}" %>
+  </li>
+</ul>
+</div>
+  <div class="profile-content-button">
+    <%= image_tag("meditation.png", class: 'logo') %>
+  </div>
+
   </div>
 
 
