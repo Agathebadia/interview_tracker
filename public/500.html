@@ -1,106 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>There is a good chance that everything you did is gone (500)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inconsolata', monospace;
-    }
+    <title>There is a good chance that everything you did is gone (500)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inconsolata', monospace;
+        }
 
 
-    /*
-    MAIN CONTAINER
-    -----------------------------------------------*/
+        /*
+        MAIN CONTAINER
+        -----------------------------------------------*/
 
-    .main-container {
-      width: 100%;
-      height: 100vh;
+        .main-container {
+            width: 100vw;
+            height: 100vh;
 
-      box-sizing: border-box;
+            box-sizing: border-box;
 
-      display: flex;
-      flex-direction: row;
+            display: flex;
+            flex-direction: row;
+        }
 
-    & > * {
-        flex-grow: 1;
-      }
+        .main-container > * {
+            flex-grow: 1;
+        }
 
-    @media screen and (max-width: 720px) {
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-    }
-
-    }
-
-
-    /*
-    SECTION LEGEND
-    -----------------------------------------------*/
-
-    .container-legend {
-      width: 100%;
-      height: auto;
-
-      box-sizing: border-box;
-
-      padding: 0.8em;
-    }
-
-    .message_paragraph {
-      font-size: 18px;
-    }
-
-    .head_one {
-      font-size: 40px;
-    }
+        @media screen and (max-width: 720px) {
+            .main-container {
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+            }
+        }
 
 
-    /*
-    SECTION IMAGE
-    -----------------------------------------------*/
+        /*
+        SECTION LEGEND
+        -----------------------------------------------*/
 
-    .container-image-error {
-      width: 100%;
-      height: auto;
+        .container-legend {
+            width: 100%;
+            height: auto;
 
-      box-sizing: border-box;
+            box-sizing: border-box;
 
-      display: flex;
-      flex-direction: row;
-      align-items: center; // align in  Y
-      justify-content: flex-end;
-      //align in X
+            padding: 0.8em;
+        }
 
-    }
-  </style>
+        .message_paragraph {
+            font-size: 18px;
+        }
+
+        .head_one {
+            font-size: 40px;
+        }
+
+
+        /*
+        SECTION IMAGE
+        -----------------------------------------------*/
+
+        .container-image-error {
+            width: 100%;
+            height: auto;
+
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+        }
+
+        .image-error {
+            width: auto;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
-  <main>
+<!-- This file lives in public/500.html -->
+<main>
     <section class="main-container">
-      <!-- START SECTION MESSAGE -->
-      <section class="container-legend">
-        <h1 class="head_one">500 internal Server Error</h1>
-        <p class="message_paragraph">
-          Sorry, something went wrong.
-        </p>
-        <p class="message_paragraph">
-          A team of hightly trained monkeys has been dispatched to deal this situation. - BTW Did you try to turning it off and on again?
-        </p>
-      </section>
-      <!-- END SECTION MESSAGE -->
+        <!-- START SECTION MESSAGE -->
+        <section class="container-legend">
+            <h1 class="head_one">500 internal Server Error</h1>
+            <p class="message_paragraph">
+                Sorry, something went wrong.
+            </p>
+            <p class="message_paragraph">
+                A team of hightly trained monkeys has been dispatched to deal this situation. - BTW Did you try to
+                turning it off and on again?
+            </p>
+        </section>
+        <!-- END SECTION MESSAGE -->
 
-      <!-- START SECTION IMAGE -->
-      <section class="container-image-error">
-        <img src="https://www.dropbox.com/s/cw9y45bsx42xtjc/None?raw=1&size=2048x1536&size_mode=3" class="image-error" alt="imagen del mensaje de error">
-      </section>
-      <!-- START SECTION IMAGE -->
+        <!-- START SECTION IMAGE -->
+        <section class="container-image-error">
+            <img src="https://www.dropbox.com/s/cw9y45bsx42xtjc/None?raw=1&size=2048x1536&size_mode=3"
+                 class="image-error" alt="imagen del mensaje de error">
+        </section>
+        <!-- START SECTION IMAGE -->
     </section>
-  </main>
+</main>
 </body>
 </html>
