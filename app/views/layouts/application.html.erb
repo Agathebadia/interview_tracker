@@ -15,15 +15,17 @@
   </head>
 
   <body>
-      <% unless  params[:controller] == "pages" && params[:action] == "home" %>
-    <div class="wrapper">
-      <% if current_user %> <%#= Show only sidebar if there is a current_user %>
-      <%= render 'shared/sidebar' %>
-      <% end %>
-      <% end %>
-      <%= render 'shared/flashes' %>
-      <%= yield %>
-    </div>
+    <% unless  params[:controller] == "pages" && params[:action] == "home" %>
+      <div class="wrapper">
+        <% if current_user %> <%#= Show only sidebar if there is a current_user %>
+          <% unless  params[:controller] == "profiles" && params[:action] == "new" %>
+            <%= render 'shared/sidebar' %>
+          <% end %>
+        <% end %>
+    <% end %>
+        <%= render 'shared/flashes' %>
+        <%= yield %>
+      </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

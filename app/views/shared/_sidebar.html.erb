@@ -10,7 +10,8 @@
 
   <div class="sidenav-text">
 <!--   <a href="/"><i class="fas fa-home"></i> Home</a> -->
-    <% if current_user && current_user.profile   %>
+   <% if current_user && current_user.profile  %>
+
       <%= link_to profile_path(current_user) do %>
         <span><i class="fas fa-home"></i> Dashboard</span>
       <% end %>
@@ -22,11 +23,19 @@
       <%#= link_to "  New application",  new_job_application_path, class: "fas fa-plus" %>
       <!-- <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a> -->
       <%= link_to profile_path(current_user, favorite: 1) do %>
-        <i class="fas fa-heart"></i> Favorites
-        <%= link_to "Settings",edit_profile_path(current_user) %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <i class="fas fa-heart"></i><span>  Favorites</span>
+      <% end %>
+
+      <%= link_to edit_profile_path(current_user) do%>
+        <i class="fas fa-cog"></i> Settings</span>
+      <% end %>
+
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fas fa-sign-out-alt"></i> Logout
       <% end %>
     <% end %>
+
+
   </div>
 </div>
 

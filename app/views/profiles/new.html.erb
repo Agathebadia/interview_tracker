@@ -1,3 +1,12 @@
-<h1> First Time Sign up</h1>
-<%= render 'form_profil', profile: @profile %>
+<div class='main-container'>
+  <h1 class="text-center" style="background-color: #3d9ae2; margin-top: 35px; padding: 40px;">Welcome</h1>
+  <div class="formular-container">
+    <div class="profile-content-button">
+      <%= image_tag("meditation.png", class: 'logo') %>
+    </div>
+    <div class="form-inputs">
+      <%= render 'form_profil', profile: @profile %>
+    </div>
+  </div>
+</div>
 
