@@ -4,29 +4,41 @@
       <%= image_tag "https://ca.slack-edge.com/T02NE0241-UP41N4KB7-d9563c1b0a91-512", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
     <div class="avatar-name">
+
+
       <a href="#profile"><%= current_user && !current_user.profile.blank?  ? current_user.profile.first_name : "" %></a>
+
     </div>
   </div>
 
   <div class="sidenav-text">
 <!--   <a href="/"><i class="fas fa-home"></i> Home</a> -->
-    <% if current_user && current_user.profile   %>
-      <%= link_to profile_path(current_user) do %>
-        <span><i class="fas fa-home"></i> Dashboard</span>
-      <% end %>
 
-      <%= link_to new_job_application_path do  %>
-        <i class="fas fa-plus"></i><span> New Application</span>
-      <% end %>
-
-      <%#= link_to "  New application",  new_job_application_path, class: "fas fa-plus" %>
-      <!-- <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a> -->
-      <%= link_to profile_path(current_user, favorite: 1) do %>
-        <i class="fas fa-heart"></i> Favorites
-        <%= link_to "Settings",edit_profile_path(current_user) %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-      <% end %>
+  <% if current_user%>
+    <%= link_to profile_path(current_user) do %>
+      <span><i class="fas fa-home"></i> Dashboard</span>
     <% end %>
+
+    <%= link_to new_job_application_path do  %>
+      <i class="fas fa-plus"></i><span> New Application</span>
+    <% end %>
+
+    <%#= link_to "  New application",  new_job_application_path, class: "fas fa-plus" %>
+    <!-- <a href="#favorites"><i class="fas fa-heart"></i> Favorites</a> -->
+    <%= link_to profile_path(current_user, favorite: 1) do %>
+      <i class="fas fa-heart"></i> Favorites
+    <% end %>
+
+    <%= link_to "Settings",edit_profile_path(current_user) %>
+
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fas fa-sign-out-alt"></i> Logout
+    <% end %>
+
+
+  <% end %>
+
   </div>
 </div>
+
 
