@@ -43,9 +43,8 @@
         <span class="sub-titles">Your interviews</span>
         <div class="application-section">
           <% @interviews.each do |interview| %>
-            <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> -
-            <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id) %>
-            <p><%= interview.description %></p>
+            <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> - <%= interview.description %>
+            <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id), class: 'application-action' %>
           <% end %>
         </div>
       <% end %>
