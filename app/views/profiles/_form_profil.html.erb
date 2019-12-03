@@ -1,16 +1,17 @@
 <div class="interview-show">
-<div class="interview_info">
-<%= simple_form_for(profile) do |t| %>
+  <div class="interview_info">
+    <%= simple_form_for(profile) do |t| %>
 
-<p></p>
-  <%= t.label :first_name %>
-  <%= t.text_field :first_name %>
-<p></p>
-  <%= t.label :last_name %>
-  <%= t.text_field :last_name %>
+    <p></p>
+      <%= t.label :first_name %>
+      <%= t.text_field :first_name %>
+    <p></p>
+      <%= t.label :last_name %>
+      <%= t.text_field :last_name %>
 
-<br>
-  <%= t.submit %>
+    <br>
+      <%= t.submit %>
+
+    <% end %>
+  </div>
 </div>
-</div>
-<% end %>
