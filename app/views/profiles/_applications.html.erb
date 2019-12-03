@@ -27,10 +27,13 @@
           </div>
           <div class="interview-details">
             <% if job_application.interviews.empty? %>
-              <p id="call-to-action"> Add your next interview date! </p>
+              <p id="call-to-action">No interviews yet.</p>
+            <% elsif job_application.interviews.last.date < Date.today + 1.week %>
+              <p class="date-attention">Coming soon: <%= job_application.interviews.last.date.strftime('%d.%m.%y') %></p>
+              <p class="date-attention"> <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
             <% elsif job_application.interviews.last.date > Date.today %>
-              <p> Next interview: <%= job_application.interviews.last.date.strftime('%-A, %-b the %-d in %Y') %> </p>
-              <p> at <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
+              <p>Next interview: <%= job_application.interviews.last.date.strftime('%d.%m.%y') %></p>
+              <p> <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
             <% else %>
               <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(job_application) %></p>
             <% end %>

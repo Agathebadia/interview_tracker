@@ -17,7 +17,9 @@
   <body>
       <% unless  params[:controller] == "pages" && params[:action] == "home" %>
     <div class="wrapper">
+      <% if current_user %> <%#= Show only sidebar if there is a current_user %>
       <%= render 'shared/sidebar' %>
+      <% end %>
       <% end %>
       <%= render 'shared/flashes' %>
       <%= yield %>
