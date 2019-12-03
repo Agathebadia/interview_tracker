@@ -6,7 +6,7 @@
       <div class="card-product-infos">
         <div class="title-heart-aligned">
           <h2 id="company_name"><%= job_application.company_name %></h2>
-          <article id="<%= dom_id(job_application) %>">
+          <article id="<%= dom_id(job_application) %>" class="title-heart-toggle">
             <p>
               <%= link_to job_application_toggle_favorite_path(job_application), method: :patch, remote: true do %>
                 <% if job_application.favorite? %>
