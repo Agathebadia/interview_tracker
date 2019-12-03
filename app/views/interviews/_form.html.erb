@@ -1,6 +1,6 @@
 <div class="interview-show">
 <div class="interview_info">
-<%= simple_form_for([@job_application, @interview]) do |t| %>
+<%= simple_form_for([job_application, @interview]) do |t| %>
   <%= t.input :date, as: :string, input_html: { class: "datepicker"} %>
 <p></p>
   <%= t.label :description %>

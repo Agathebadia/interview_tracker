@@ -31,22 +31,32 @@ body {
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.card-interview {
+
+.card-new-interview {
+  background-color: white;
+  min-height: 386px;
+  min-width: 365px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-interview-history {
   background-color: white;
   margin: auto;
-  min-height: 322px;
-  max-width: 500px;
+  min-height: 100px;
+  max-width: 100%;
   padding: 20px;
+  margin: 20px;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-application {
   background-color: white;
-  margin: auto;
   max-width: 500px;
   padding: 20px;
   border-radius: 4px;
