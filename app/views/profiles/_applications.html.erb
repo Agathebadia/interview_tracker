@@ -1,47 +1,45 @@
 <% if applications.any? %>
-  <div class="sub-titles"> <%= title %> </div>
-  <% applications.each do |job_application| %>
-    <div class="card-product">
-      <%= link_to '', job_application_path(job_application), class: 'card-link' %>
-      <div class="card-product-infos">
-        <div class="title-heart-aligned">
-          <h2 id="company_name"><%= job_application.company_name %></h2>
-          <article id="<%= dom_id(job_application) %>" class="title-heart-toggle">
-            <p>
-              <%= link_to job_application_toggle_favorite_path(job_application), method: :patch, remote: true do %>
-                <% if job_application.favorite? %>
-                  <i class="fas fa-heart"></i>
-                <% else %>
-                  <i class="far fa-heart"></i>
-                <% end %>
-              <% end %>
-            </p>
-          </article>
-        </div>
+  <div class="application-list">
+    <span class="sub-titles"><%= title %></span>
+
+    <% applications.each do |job_application| %>
+      <li class="application">
+        <span><%= job_application.company_name %></span>
+
+        <div class="details"><i>Job title</i><%= job_application.job_title %></div>
+        <div class="details"><i>Status</i><%= job_application.status %></div>
 
         <div class="details">
-
-          <div class="application-details">
-            <p>Job title: <%= job_application.job_title %></p>
-            <p> Status: <%= job_application.status %></p>
-          </div>
-          <div class="interview-details">
+          <i>Date & time</i>
+          <div class="application-time">
             <% if job_application.interviews.empty? %>
-              <p id="call-to-action">No interviews yet.</p>
+              <div class="nothing">No interviews yet.</div>
             <% elsif job_application.interviews.last.date < Date.today + 1.week %>
-              <p class="date-attention">Coming soon: <%= job_application.interviews.last.date.strftime('%d.%m.%y') %></p>
-              <p class="date-attention"> <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
+              <div class="date"><%= job_application.interviews.last.date.strftime('%b %d, %Y at %l:%M %P') %></div>
+
             <% elsif job_application.interviews.last.date > Date.today %>
-              <p>Next interview: <%= job_application.interviews.last.date.strftime('%d.%m.%y') %></p>
-              <p> <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
+              <div class="date"><%= job_application.interviews.last.date.strftime('%d.%m.%y at %l:%M %P') %></div>
             <% else %>
-              <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(job_application) %></p>
+              <%= link_to " Add your next interview date!", new_job_application_interview_path(job_application) %>
             <% end %>
           </div>
         </div>
-      </div>
-    </div>
-  <% end %>
 
+        <div class="application-actions">
+          <div id="<%= dom_id(job_application) %>" class="title-heart-toggle">
+            <%= link_to job_application_toggle_favorite_path(job_application), method: :patch, remote: true do %>
+              <% if job_application.favorite? %>
+                <i class="fas fa-heart"></i>
+              <% else %>
+                <i class="far fa-heart"></i>
+              <% end %>
+            <% end %>
+          </div>
+
+          <%= link_to 'Update', job_application_path(job_application), class: 'application-action' %>
+        </div>
+      </li>
+    <% end %>
+  </div>
 <% end %>
 

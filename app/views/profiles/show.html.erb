@@ -1,45 +1,39 @@
 <!-- Render cards with instance and their value -->
 <% active = "active" %>
-<div class="profile-content">
+<div class="profile-content content">
   <div class="tab-logo">
-
-  <div class="tabs">
- <ul class="nav nav-pills">
-  <li class="nav-item">
-    <%= link_to "Applied", profile_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "Interviewing", profile_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "Technical assignment", profile_path(status: 'Technical assignment'), class:"nav-link #{active if params[:status] == 'Technical assignment'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "Management interview", profile_path(status: 'Management interview'), class:"nav-link #{active if params[:status] == 'Management interview'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "Offer", profile_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "Hired", profile_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "Closed", profile_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to "All", profile_path, class:"nav-link #{active if !params[:status]}" %>
-  </li>
-</ul>
-</div>
-  <div class="profile-content-button">
-    <%= image_tag("meditation.png", class: 'logo') %>
-  </div>
-
+    <div class="tabs">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <%= link_to "All", profile_path, class:"nav-link #{active if !params[:status]}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Applied", profile_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Interviewing", profile_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Assignment", profile_path(status: 'Assignment'), class:"nav-link #{active if params[:status] == 'Assignment'}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Final interview", profile_path(status: 'Final interview'), class:"nav-link #{active if params[:status] == 'Final interview'}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Offer", profile_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Hired", profile_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Closed", profile_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" %>
+        </li>
+      </ul>
+    </div>
   </div>
   <%= render 'applications', applications: @upcoming_interviews, title: 'Your interview(s) in the upcoming days' %>
   <%= render 'applications', applications: @with_interviews, title: 'Your scheduled interview(s)' %>
   <%= render 'applications', applications: @no_interviews, title: 'No interview planned' %>
-
 </div>
 
 

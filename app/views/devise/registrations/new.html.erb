@@ -2,7 +2,6 @@
 
   <h1 class="text-center" style="background-color: #3d9ae2; margin-top: 35px; padding: 40px;">Sign up</h1>
 
-
   <div class="formular-container">
  <div class="profile-content-button">
     <%= image_tag("meditation.png", class: 'logo') %>
@@ -29,12 +28,7 @@
                 placeholder: "Password Confirmation",
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-
-
-
-
   </div>
-
 
   <div>
     <!-- <button type="button" class="btn-block button-blue" id="btn-enhanced"> -->
@@ -42,6 +36,7 @@
 
     <%= f.button :submit, "Sign up" %>
     </button>
+
   </div>
     <%= render "devise/shared/links" %>
     <!-- </button> -->

@@ -1,9 +1,85 @@
 body {
-  background-color: #F0F5F8;
+  background-color: #F7F4FC;
 }
 
 .job-application {
-  padding: 20px;
+  .application-list {
+
+    margin: 10px auto;
+
+    .sub-titles {
+      border-top: 1px solid #f1f1f1;
+    }
+
+    h1 {
+      padding: 30px 0 30px 30px;
+      display: block;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a:not(:first-of-type) {
+        margin-left: 16px;
+      }
+
+      a:hover {
+        .far {
+          color: #8096e5;
+        }
+      }
+
+      .far, .fas {
+        color: #8096e5
+      }
+    }
+
+    .application-section {
+      padding: 30px 30px 30px;
+
+      p {
+        font-size: 14px;
+      }
+
+      .application-details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 30px;
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 170px;
+          font-size: 14px;
+
+          i {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-style: normal;
+            color: #8096e5;
+          }
+        }
+      }
+
+      .impression {
+        display: block;
+        margin-top: 36px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-style: normal;
+        color: #8096e5;
+      }
+
+      .impression-content {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .logo {
@@ -31,26 +107,42 @@ body {
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.card-interview {
+
+.card-new-interview {
+  background-color: white;
+  min-height: 386px;
+  min-width: 365px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-interview-history {
+  text-align: center;
   background-color: white;
   margin: auto;
-  min-height: 322px;
-  max-width: 500px;
+  min-height: 100px;
+  max-width: 100%;
   padding: 20px;
+  margin: 20px;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-application {
   background-color: white;
-  margin: auto;
   max-width: 500px;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.button-holder {
+  margin-top: 5px;
+  text-align: center;
 }
 
 .title-heart-aligned{
@@ -75,3 +167,20 @@ p {
 .title-heart-toggle {
   z-index: 5;
 }
+
+.application-action {
+        height: 30px;
+        padding: 5px 16px;
+        background: #8096e5;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-left: 12px;
+        border-radius: 4px;
+
+        &:hover {
+          text-decoration: none;
+          color: white;
+          background: #6d80c4;
+        }
+      }

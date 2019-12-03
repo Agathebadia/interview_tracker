@@ -1,3 +1,81 @@
+.job-application-form {
+  padding: 30px;
+
+  form {
+    min-width: 620px;
+  }
+}
+
+form {
+  label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #8096e5;
+  }
+
+  input {
+    display: block;
+    border: 1px solid #cdcdcd;
+    padding: 7px 18px;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #8096e5;
+    box-shadow: none;
+  }
+
+  textarea {
+    display: block;
+    margin-bottom: 30px;
+    border: 1px solid #cdcdcd;
+    width: 100%;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #8096e5;
+    box-shadow: none;
+  }
+
+  .form-halves {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+  }
+
+  .form-spacer {
+    display: block;
+    margin-top: 30px;
+  }
+
+  input[type="submit"] {
+    height: 44px;
+    padding: 10px 33px;
+    background: #8096e5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #788cd6;
+    }
+  }
+}
+
+.new_interview {
+  padding: 30px;
+}
+
+
 .formular-container {
   width: 666px;
   display: flex;
@@ -6,6 +84,14 @@
   background-color: #eaeaea;
   padding-top: 30px;
   padding-bottom: 25px;
+}
+
+.div-new-application {
+  background-color: white;
+}
+
+.div-log-in-form {
+  background-color: white;
 }
 
 .text-center {

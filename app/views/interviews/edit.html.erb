@@ -1,9 +1,8 @@
-<div class='main-container'>
-  <h1 class="text-center" style="background-color: #3d9ae2; padding: 40px;">Your interview</h1>
-  <div class="formular-container">
- <div class="profile-content-button">
-    <%= image_tag("meditation.png", class: 'logo') %>
-</div>
+<div class='main-container content'>
+  <ul class="application-list">
+    <span class="sub-titles">Edit interview</span>
+    <div style="padding: 30px;">
       <%= render 'form', job_application: @job_application %>
+    </div>
   </div>
 </div>
