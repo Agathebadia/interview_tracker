@@ -1,62 +1,57 @@
-<div class="job-application">
+<div class="content">
+  <%= link_to 'Back to dashboard', profile_path(current_user), class: 'dashboard-link' %>
 
-  <div class="button-logo-display">
-    <%= link_to '<button type="button" class="default-button">Back to the dashboard</button>'.html_safe, profile_path(current_user) %>
-    <%= image_tag("meditation.png", class: 'logo') %>
-  </div>
+  <div class="job-application">
+    <div class="application-list">
+      <h1><%= @job_application.company_name %></h1>
 
-  <h1><%= @job_application.company_name %></h1>
+      <span class="sub-titles actions">
+        Your job application
+        <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
+          <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>
+          <% end %>
+          <%= link_to job_application_toggle_favorite_path(@job_application), method: :patch, remote: true do %>
+          <% if @job_application.favorite? %>
+          <i class="fas fa-heart"></i>
+          <% else %>
+          <i class="far fa-heart"></i>
+          <% end %>
+          <% end %>
+          <%= link_to job_application_path(@job_application), method: "delete" do %>
+          <i class="fas fa-trash-alt" id="bin"></i>
+          <% end %>
+        </div>
+      </span>
+      <div class="application-section">
+        <div class="application-details">
+          <div class="details"><i>Job title</i><%= @job_application.job_title %></div>
+          <div class="details"><i>Application status</i><%= @job_application.status %></div>
+          <div class="details"><i>Recruiter's name</i><%= @job_application.recruiter_name %></div>
+          <div class="details"><i>Recruiter's email</i><%= @job_application.recruiter_email %></div>
+        </div>
 
-  <div class="cards">
-    <div class="card-application m-5">
-
-      <h1>Your job application</h1>
-      <p>Job title: <%= @job_application.job_title %></p>
-      <p>Application status: <%= @job_application.status %></p>
-      <p>Recruiter's name: <%= @job_application.recruiter_name %></p>
-      <p>Recruiter's email: <%= @job_application.recruiter_email %></p>
-      <p>Your impression: <%= @job_application.your_impression %></p>
-
-
-      <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
-        <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>
-        <% end %>
-        <%= link_to job_application_toggle_favorite_path(@job_application), method: :patch, remote: true do %>
-        <% if @job_application.favorite? %>
-        <i class="fas fa-heart"></i>
-        <% else %>
-        <i class="far fa-heart"></i>
-        <% end %>
-        <% end %>
-        <%= link_to job_application_path(@job_application), method: "delete" do %>
-        <i class="fas fa-trash-alt" id="bin"></i>
-        <% end %>
-
+        <i class="impression">Your impression</i>
+        <p><%= @job_application.your_impression %></p>
       </div>
-    </div>
 
-
-    <div class="card-new-interview m-5">
-
-
-      <h1>Add an interview</h1>
-      <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
-    </div>
-  </div>
-
-  <% if @interviews.exists? %>
-  <div class=card-interview-history>
-    <h1>Your interviews</h1>
-    <% @interviews.each do |interview| %>
-    <div class="interview-box">
-      <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> -
-        <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id) %>
-        <p><%= interview.description %></p>
-        <% end %>
+      <span class="sub-titles">Add an interview</span>
+      <div class="interview-form application-section">
+        <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
       </div>
+
+      <% if @interviews.exists? %>
+        <span class="sub-titles">Your interviews</span>
+        <div class="application-section">
+          <% @interviews.each do |interview| %>
+            <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> -
+            <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id) %>
+            <p><%= interview.description %></p>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
+</div>
 
 
 

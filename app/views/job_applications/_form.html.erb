@@ -1,32 +1,39 @@
-<div class="text-center">
+<div class="job-application-form">
+  <%= form_for(@job_application) do |f| %>
+    <div class="form-halves">
 
-<h1><%= @job_application.company_name %></h1>
+      <div>
+        <%= f.label :job_title %>
+        <%= f.text_field :job_title %>
+      </div>
 
-<div class="job-application-show">
-<div class="job-application_info">
-<%= form_for(@job_application) do |f| %>
- <div><%= f.label :job_title %></div>
-  <div><%= f.text_field :job_title %></div>
-<p></p>
-  <div><%= f.label :company_name %></div>
-  <div><%= f.text_field :company_name %></div>
-<p></p>
-  <div><%= f.label :status %></div>
-  <div><%= f.select :status, ['Applied', 'Interviewing', 'Technical assignment', 'Management interview', 'Offer', 'Hired', 'Closed'] %></div>
-<p></p>
-  <div><%= f.label :recruiter_name %></div>
-  <div><%= f.text_field :recruiter_name %></div>
-<p></p>
-  <div><%= f.label :recruiter_email %></div>
-  <div><%= f.text_field :recruiter_email %></div>
-  <p></p>
+      <div>
+        <%= f.label :company_name %>
+        <%= f.text_field :company_name %>
+      </div>
 
-  <div><%= f.label :your_impression %></div>
-  <div><%= f.text_area :your_impression %></div>                        
-  <div><%= f.submit class: "default-button" %></div>
-<% end %>
+      <div>
+        <%= f.label :recruiter_name %>
+        <%= f.text_field :recruiter_name %>
+      </div>
 
+      <div>
+        <%= f.label :recruiter_email %>
+        <%= f.text_field :recruiter_email %>
+      </div>
+    </div>
+
+    <div class="form-spacer">
+      <%= f.label :status %>
+      <%= f.select :status, ['Applied', 'Interviewing', 'Technical assignment', 'Management interview', 'Offer', 'Hired', 'Closed'] %>
+    </div>
+
+    <div class="form-spacer">
+      <%= f.label :your_impression %>
+      <%= f.text_area :your_impression %>
+    </div>
+
+    <%= f.submit class: "default-button" %>
+  <% end %>
 </div>
 
-</div>
-</div>

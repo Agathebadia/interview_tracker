@@ -1,9 +1,79 @@
 body {
-  background-color: #F0F5F8;
+  background-color: #F7F4FC;
 }
 
 .job-application {
-  padding: 20px;
+  .application-list {
+
+    .sub-titles {
+      border-top: 1px solid #f1f1f1;
+    }
+
+    h1 {
+      padding: 30px 0 30px 30px;
+      display: block;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a:not(:first-of-type) {
+        margin-left: 16px;
+      }
+
+      a:hover {
+        .far {
+          color: #8096e5;
+        }
+      }
+
+      .far, .fas {
+        color: #8096e5
+      }
+    }
+
+    .application-section {
+      padding: 30px 30px 30px;
+
+      .application-details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 30px;
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 170px;
+          font-size: 14px;
+
+          i {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-style: normal;
+            color: #8096e5;
+          }
+        }
+      }
+
+      .impression {
+        display: block;
+        margin-top: 36px;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-style: normal;
+        color: #8096e5;
+      }
+
+      .impression-content {
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .logo {

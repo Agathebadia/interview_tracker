@@ -2,28 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
 }
-
-.tabs {
-
-}
-
 
 .nav-item a {
-  color: #0C7DBA;
+  color: #8096e5;
   padding: 4px 15px 2px;
   font-weight: bold;
+  border-radius: 4px;
+
+  &:hover {
+    text-decoration: none;
+    color: #788cd6;
+  }
 }
 
-.nav-item a:hover {
-  text-decoration: none;
-  color: #096496;
-    border-radius: 4px;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show .nav-link {
   color: white;
-  background-color: #0C7DBA;
+  background-color: #8096e5;
 }
 
 

@@ -22,3 +22,57 @@
     background-color: #FFFFFF;
   }
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    color: #8096e5;
+  }
+
+  span {
+    display: block;
+    margin: 36px 0 16px;
+    font-family: $headers-font;
+    font-size: 26px;
+  }
+
+  p {
+    max-width: 420px;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  a {
+    height: 40px;
+    padding: 10px 33px;
+    background: #8096e5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #788cd6;
+    }
+  }
+}
+
+.dashboard-link {
+  color: #8096e5;
+  font-size: 12px;
+}

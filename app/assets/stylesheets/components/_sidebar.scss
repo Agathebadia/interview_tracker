@@ -1,23 +1,68 @@
-.avatar-large {
-  width: 56px;
-  border-radius: 50%;
-}
-
-.body {
-  font-family: "Lato", sans-serif;
-}
-
-.avatar-name {
-  padding-right: 12px;
-  font-weight: 900;
-}
-
 .sidenav {
-  background-color: #eaeaea;
-  overflow-x: hidden;
-  padding-top: 20px;
-  box-shadow: -2px -2px 5px 0 #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 26px;
+  height: 100vh;
+  background: white;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
 
+  .sidenav-logo {
+    align-self: center;
+    width: 90px;
+    height: 90px;
+  }
+
+  ul.sidenav-links {
+    padding: 0;
+    margin-top: -160px;
+    width: 180px;
+    list-style: none;
+
+    li.sidenav-link {
+      position: relative;
+      border-bottom: 1px solid #f1f1f1;
+
+      a {
+        padding: 8px 0;
+        margin: 8px 0;
+        color: #C1C2CD;
+
+        i {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    li.sidenav-link.active {
+      a {
+        color: black;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 50px;
+        width: 3px;
+        top: 0;
+        right: -33px;
+        background-color: #8097E5;
+      }
+    }
+  }
+
+  .logout {
+    opacity: 0.3;
+
+    a {
+      padding: 0;
+
+      i {
+        margin-right: 16px;
+      }
+    }
+  }
 }
 
 .sidenav-text {

@@ -1,6 +1,80 @@
-.sub-titles {
-  text-align: center;
+.application-list {
+  padding: 0;
+  margin: 40px auto;
+  max-width: 866px;
+  background-color: white;
+  border-radius: 20px;
+
+  span.sub-titles {
+    display: block;
+    padding: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .application {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+
+    span {
+      width: 140px;
+      font-size: 21px;
+      font-family: $headers-font;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 170px;
+      font-size: 14px;
+
+      i {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-style: normal;
+        color: #8096e5;
+      }
+    }
+
+    .application-actions {
+      display: flex;
+      margin-left: 20px;
+
+      .title-heart-toggle {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #8096e5;
+        border-radius: 4px;
+
+        .far, .fas {
+          color: #8096e5;
+        }
+      }
+
+      .application-action {
+        height: 30px;
+        padding: 0 16px;
+        background: #8096e5;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 12px;
+        border-radius: 4px;
+      }
+    }
+  }
 }
+
 
 .card-link {
     position: absolute;

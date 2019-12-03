@@ -1,3 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "application_show";
+
+.content {
+  padding: 40px;
+  height: 100vh;
+  overflow-y: scroll;
+}
