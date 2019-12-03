@@ -7,7 +7,6 @@
 
   <h1><%= @job_application.company_name %></h1>
 
-
   <div class="cards">
     <div class="card-application m-5">
 
@@ -38,6 +37,7 @@
 
 
     <div class="card-new-interview m-5">
+
 
       <h1>Add an interview</h1>
       <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>

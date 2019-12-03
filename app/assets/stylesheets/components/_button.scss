@@ -6,10 +6,10 @@
 .default-button {
   margin: auto;
   border: solid, 1px;
+
   padding: 2.5px 3.75px;
   background-color: #3D9AE2;
   border-radius: 4px;
-
 }
 
 .button-blue {
@@ -24,11 +24,11 @@
 .card-interview {
 
   .default-button {
+
     display: flex;
     justify-content: center;
     padding: 5px 8px;
     margin-bottom: 10px;
-
   }
 }
 

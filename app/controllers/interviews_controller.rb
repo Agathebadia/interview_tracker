@@ -12,7 +12,7 @@ class InterviewsController < ApplicationController
     @job_application = JobApplication.find(params[:job_application_id])
     @interview = Interview.new(interview_params)
     @interview.job_application = @job_application
-    if @interview.save!
+    if @interview.save
       redirect_to @job_application
     else
       render :new
@@ -28,7 +28,7 @@ class InterviewsController < ApplicationController
     @interview = Interview.find(params[:id])
     @job_application = @interview.job_application
     @interview.update(interview_params)
-    if @interview.save!
+    if @interview.save
       redirect_to profile_path(current_user)
     else
       render :edit
