@@ -38,10 +38,9 @@
 
 
     <div class="card-interview">
+
+      <% if @job_application.interviews.exists? %>
       <h1>Your interviews</h1>
-
-      <%= link_to '<button type="button" class="default-button">Add an interview</button>'.html_safe, new_job_application_interview_path(@job_application) %>
-
       <% @interviews.each do |interview| %>
         <div class="interview-box">
           <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> -
@@ -52,8 +51,13 @@
       <% end %>
 
     </div>
+      <% else %>
+      <h1>Add an interview</h1>
+      <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
+      <% end %>
   </div>
 </div>
+
 
 
 

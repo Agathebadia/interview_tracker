@@ -6,6 +6,7 @@ class JobApplicationsController < ApplicationController
   def show
     @job_application = JobApplication.find(params[:id])
     @interviews = @job_application.interviews
+    @interview = Interview.new
   end
 
   def create
