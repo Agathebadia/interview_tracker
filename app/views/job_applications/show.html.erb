@@ -49,8 +49,7 @@
     <h1>Your interviews</h1>
     <% @interviews.each do |interview| %>
     <div class="interview-box">
-      <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> -
-        Contact: <%= interview.interviewer_email %> -
+      <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> -
         <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id) %>
         <p><%= interview.description %></p>
         <% end %>
