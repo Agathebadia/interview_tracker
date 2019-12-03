@@ -10,7 +10,7 @@
 
   <div class="sidenav-text">
 <!--   <a href="/"><i class="fas fa-home"></i> Home</a> -->
-    <% if current_user && current_user.profile   %>
+    <% if current_user %>
       <%= link_to profile_path(current_user) do %>
         <span><i class="fas fa-home"></i> Dashboard</span>
       <% end %>

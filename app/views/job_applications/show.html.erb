@@ -5,23 +5,25 @@
     <%= image_tag("meditation.png", class: 'logo') %>
   </div>
 
-  <h1><%= @job_application.company_name %></h1>
+  <div class="container-one-job-application">
+  <div class="show-edit-form">
+  <h2 id="company_name"><%= @job_application.company_name %></h2>
 
 
-  <div class="cards">
-    <div class="card-application">
+<!--  <div class="cards">-->
+<!--    <div class="card-application">-->
 
-      <h1>Your job application</h1>
-      <p>Job title: <%= @job_application.job_title %></p>
-      <p>Application status: <%= @job_application.status %></p>
-      <p>Recruiter's name: <%= @job_application.recruiter_name %></p>
-      <p>Recruiter's email: <%= @job_application.recruiter_email %></p>
-      <p>Your impression: <%= @job_application.your_impression %></p>
+<!--      <h1>Your job application</h1>-->
+<!--      <p>Job title: <%#= @job_application.job_title %></p>-->
+<!--      <p>Application status: <%#= @job_application.status %></p>-->
+<!--      <p>Recruiter's name: <%#= @job_application.recruiter_name %></p>-->
+<!--      <p>Recruiter's email: <%#= @job_application.recruiter_email %></p>-->
+<!--      <p>Your impression: <%#= @job_application.your_impression %></p>-->
 
 
       <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
-        <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>
-        <% end %>
+<!--        <%#= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>-->
+        <%# end %>
         <%= link_to job_application_toggle_favorite_path(@job_application), method: :patch, remote: true do %>
           <% if @job_application.favorite? %>
             <i class="fas fa-heart"></i>
@@ -34,8 +36,8 @@
         <% end %>
 
       </div>
-    </div>
-
+<!--    </div>-->
+  </div>
 
     <div class="card-interview">
       <h1>Your interviews</h1>
