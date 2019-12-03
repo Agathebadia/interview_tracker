@@ -1,5 +1,7 @@
 <div class='main-container'>
-  <h1 class="text-center" style="background-color: #3d9ae2; padding: 40px;">Sign up</h1>
+
+  <h1 class="text-center" style="background-color: #3d9ae2; margin-top: 35px; padding: 40px;">Sign up</h1>
+
 
   <div class="formular-container">
  <div class="profile-content-button">
@@ -13,12 +15,18 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: false,
+                placeholder: "E-mail",
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
+                label: false,
+                placeholder: "Password",
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: false,
+                placeholder: "Password Confirmation",
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
 
@@ -28,11 +36,16 @@
   </div>
 
 
-  <div class="default-button">
+  <div>
+    <!-- <button type="button" class="btn-block button-blue" id="btn-enhanced"> -->
+    <button type="button" class="btn-block button-blue">
+
     <%= f.button :submit, "Sign up" %>
+    </button>
   </div>
+    <%= render "devise/shared/links" %>
+    <!-- </button> -->
 <% end %>
 
-<%= render "devise/shared/links" %>
  </div>
 </div>

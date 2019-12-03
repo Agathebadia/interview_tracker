@@ -1,0 +1,47 @@
+<% if applications.any? %>
+  <div class="sub-titles"> <%= title %> </div>
+  <% applications.each do |job_application| %>
+    <div class="card-product">
+      <%= link_to '', job_application_path(job_application), class: 'card-link' %>
+      <div class="card-product-infos">
+        <div class="title-heart-aligned">
+          <h2 id="company_name"><%= job_application.company_name %></h2>
+          <article id="<%= dom_id(job_application) %>">
+            <p>
+              <%= link_to job_application_toggle_favorite_path(job_application), method: :patch, remote: true do %>
+                <% if job_application.favorite? %>
+                  <i class="fas fa-heart"></i>
+                <% else %>
+                  <i class="far fa-heart"></i>
+                <% end %>
+              <% end %>
+            </p>
+          </article>
+        </div>
+
+        <div class="details">
+
+          <div class="application-details">
+            <p>Job title: <%= job_application.job_title %></p>
+            <p> Status: <%= job_application.status %></p>
+          </div>
+          <div class="interview-details">
+            <% if job_application.interviews.empty? %>
+              <p id="call-to-action">No interviews yet.</p>
+            <% elsif job_application.interviews.last.date < Date.today + 1.week %>
+              <p class="date-attention">Coming soon: <%= job_application.interviews.last.date.strftime('%d.%m.%y') %></p>
+              <p class="date-attention"> <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
+            <% elsif job_application.interviews.last.date > Date.today %>
+              <p>Next interview: <%= job_application.interviews.last.date.strftime('%d.%m.%y') %></p>
+              <p> <%= job_application.interviews.last.date.strftime('%l:%M %P') %> </p>
+            <% else %>
+              <p id="call-to-action"> <%= link_to " Add your next interview date!", new_job_application_interview_path(job_application) %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+<% end %>
+

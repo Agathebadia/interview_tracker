@@ -3,14 +3,17 @@
   justify-content: center;
 }
 
-
 .default-button {
   margin: auto;
   border: solid, 1px;
-  padding: 16px 20px;
-  color: white;
+  padding: 2.5px 3.75px;
+  background-color: #3D9AE2;
   border-radius: 4px;
-  background-color: #0B7DBA;
+
+}
+
+.button-blue {
+  background-color: #3D9AE2;
 }
 
 .default-button:hover {
@@ -21,10 +24,10 @@
 .card-interview {
 
   .default-button {
-  display: flex;
-  justify-content: center;
-  padding: 5px 8px;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 8px;
+    margin-bottom: 10px;
 
   }
 }
@@ -39,30 +42,65 @@
 .card-application-icons {
   display: flex;
   justify-content: space-between;
+}
 
 #bin {
-  font-size: 30px;
+  font-size: 24px;
   color: #0B7DBA;
-  }
+}
 
 #bin:hover {
   color: #0a70a8;
-  }
+}
 
-  #edit-icon {
-    font-size: 30px;
-    color: #0B7DBA;
-  }
-  #edit-icon:hover {
+#edit-icon {
+  font-size: 24px;
+  color: #0B7DBA;
+}
+
+#edit-icon:hover {
   color: #0a70a8;
-  }
+}
+
+#fav-icon {
+  font-size: 24px;
+  color: #0B7DBA;
+}
+
+#fav-icon:hover {
+  color: #0a70a8;
+}
+
+#unfav-icon {
+  font-size: 24px;
+  color: #0B7DBA;
+}
+
+#unfav-icon:hover {
+  color: #0a70a8;
 }
 
 .banner {
 
-  .default-button{
-  margin: 10px 10px auto;
-  font-size: 25px;
-  padding: 5px 10px;
+  .default-button {
+    margin: 10px 10px auto;
+    font-size: 25px;
+    padding: 5px 10px;
+  }
+}
+
+#btn-enhanced {
+  padding: 9px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.card-application-icons {
+  i {
+    font-size: 24px;
+    color: #0B7DBA;
   }
 }
