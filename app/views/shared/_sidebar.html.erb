@@ -1,4 +1,5 @@
 <div class="sidenav">
+
   <%= image_tag 'meditation.png', class: 'sidenav-logo'%>
   <ul class='sidenav-links'>
     <li class="sidenav-link <%= 'active' if controller_name == 'profiles' && action_name == 'show' && params[:favorite].nil? %>">
