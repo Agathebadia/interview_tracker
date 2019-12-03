@@ -5,6 +5,8 @@ body {
 .job-application {
   .application-list {
 
+    margin: 10px auto;
+
     .sub-titles {
       border-top: 1px solid #f1f1f1;
     }
@@ -38,6 +40,10 @@ body {
 
     .application-section {
       padding: 30px 30px 30px;
+
+      p {
+        font-size: 14px;
+      }
 
       .application-details {
         display: grid;
@@ -161,3 +167,20 @@ p {
 .title-heart-toggle {
   z-index: 5;
 }
+
+.application-action {
+        height: 30px;
+        padding: 5px 16px;
+        background: #8096e5;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-left: 12px;
+        border-radius: 4px;
+
+        &:hover {
+          text-decoration: none;
+          color: white;
+          background: #6d80c4;
+        }
+      }
