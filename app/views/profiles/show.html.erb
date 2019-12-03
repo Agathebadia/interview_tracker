@@ -14,10 +14,10 @@
           <%= link_to "Interviewing", profile_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Technical assignment", profile_path(status: 'Technical assignment'), class:"nav-link #{active if params[:status] == 'Technical assignment'}" %>
+          <%= link_to "Assignment", profile_path(status: 'Assignment'), class:"nav-link #{active if params[:status] == 'Assignment'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Management interview", profile_path(status: 'Management interview'), class:"nav-link #{active if params[:status] == 'Management interview'}" %>
+          <%= link_to "Final interview", profile_path(status: 'Final interview'), class:"nav-link #{active if params[:status] == 'Final interview'}" %>
         </li>
         <li class="nav-item">
           <%= link_to "Offer", profile_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
