@@ -13,7 +13,7 @@ class JobApplicationsController < ApplicationController
     @job_application = JobApplication.new(job_application_params)
     @job_application.user_id = current_user.id
     if @job_application.save
-      redirect_to @job_application
+      redirect_to job_application_path(@job_application)
     else
       render :new
     end
