@@ -4,6 +4,7 @@
     <div class="application-list">
       <h1><%= @job_application.company_name %></h1>
 
+
       <span class="sub-titles actions">
         Your job application
         <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
@@ -33,13 +34,7 @@
         <p><%= @job_application.your_impression %></p>
       </div>
 
-
-      <span class="sub-titles">Add an interview</span>
-      <div class="interview-form application-section">
-        <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
-      </div>
-
-      <% if @interviews.exists? %>
+       <% if @interviews.exists? %>
         <span class="sub-titles">Your interviews</span>
         <div class="application-section">
           <% @interviews.each do |interview| %>
@@ -48,6 +43,11 @@
           <% end %>
         </div>
       <% end %>
+
+      <span class="sub-titles">Add an interview</span>
+      <div class="interview-form application-section">
+        <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
+      </div>
     </div>
   </div>
 </div>
