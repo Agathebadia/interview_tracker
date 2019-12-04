@@ -26,7 +26,7 @@ class ProfilesController < ApplicationController
     @profile.user = current_user
    # @first_name = .new(interview_params)
 
-    if @profile.save!
+    if @profile.save
       redirect_to profile_path(current_user)
     else
       render :new

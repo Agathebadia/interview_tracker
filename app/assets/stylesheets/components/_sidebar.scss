@@ -89,7 +89,15 @@
   padding: 0px 10px;
 }
 
-
+.inactive {
+  padding:8px 0;;
+  margin: 8px 0;
+  display: block;
+  color: #C1C2CD;
+   i {
+          margin-right: 16px;
+        }
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
