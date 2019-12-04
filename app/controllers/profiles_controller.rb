@@ -32,6 +32,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new
     #@first_name = first_name.new
     #@last_name = last_name.new
+    redirect_to show_profiles_path(current_user)
   end
 
   def create
@@ -40,7 +41,7 @@ class ProfilesController < ApplicationController
     # @first_name = .new(interview_params)
 
     if @profile.save
-      redirect_to profile_path(current_user)
+      redirect_to show_profiles_path(current_user)
     else
       render :new
     end
@@ -53,7 +54,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
     @profile.update(profile_params)
-    redirect_to profile_path(current_user)
+    redirect_to show_profiles_path
   end
 
 # Controller for the Dashboard
