@@ -24,9 +24,9 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user = current_user
-   # @first_name = .new(interview_params)
+    # @first_name = .new(interview_params)
 
-    if @profile.save!
+    if @profile.save
       redirect_to profile_path(current_user)
     else
       render :new
@@ -44,8 +44,6 @@ class ProfilesController < ApplicationController
   end
 
 # Controller for the Dashboard
-
-
 
   private
 
