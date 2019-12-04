@@ -5,28 +5,28 @@
     <div class="tabs">
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <%= link_to "All", profile_path, class:"nav-link #{active if !params[:status]}" %>
+          <%= link_to "All", show_profiles_path, class:"nav-link #{active if !params[:status]}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Applied", profile_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" %>
+          <%= link_to "Applied", show_profiles_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Interviewing", profile_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
+          <%= link_to "Interviewing", show_profiles_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Assignment", profile_path(status: 'Assignment'), class:"nav-link #{active if params[:status] == 'Assignment'}" %>
+          <%= link_to "Assignment", show_profiles_path(status: 'Assignment'), class:"nav-link #{active if params[:status] == 'Assignment'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Final interview", profile_path(status: 'Final interview'), class:"nav-link #{active if params[:status] == 'Final interview'}" %>
+          <%= link_to "Final interview", show_profiles_path(status: 'Final interview'), class:"nav-link #{active if params[:status] == 'Final interview'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Offer", profile_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
+          <%= link_to "Offer", show_profiles_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Hired", profile_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" %>
+          <%= link_to "Hired", show_profiles_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Closed", profile_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" %>
+          <%= link_to "Closed", show_profiles_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" %>
         </li>
       </ul>
     </div>

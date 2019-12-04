@@ -3,7 +3,7 @@
   <%= image_tag 'meditation.png', class: 'sidenav-logo'%>
   <ul class='sidenav-links'>
     <li class="sidenav-link <%= 'active' if controller_name == 'profiles' && action_name == 'show' && params[:favorite].nil? %>">
-      <%= link_to profile_path(current_user) do %>
+      <%= link_to show_profiles_path do %>
         <span><i class="fas fa-home"></i> Dashboard</span>
       <% end %>
     </li>
@@ -15,7 +15,7 @@
     </li>
     <li class='sidenav-link'>
       <li class="sidenav-link <%= 'active' if controller_name == 'profiles' && action_name == 'show' && params[:favorite] %> ">
-      <%= link_to profile_path(current_user, favorite: 1) do %>
+      <%= link_to show_profiles_path(current_user, favorite: 1) do %>
         <i class="fas fa-heart"></i> Favorites
       <% end %>
     </li>

@@ -29,7 +29,7 @@ class InterviewsController < ApplicationController
     @job_application = @interview.job_application
     @interview.update(interview_params)
     if @interview.save
-      redirect_to profile_path(current_user)
+      redirect_to show_profiles_path
     else
       render :edit
     end
