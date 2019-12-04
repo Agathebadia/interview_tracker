@@ -50,11 +50,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #8096e5;
-        border-radius: 4px;
+        // border: 1px solid #8096e5;
+        // border-radius: 4px;
 
         .far, .fas {
           color: #ffb865;
+          font-size: 25px;
         }
       }
 
