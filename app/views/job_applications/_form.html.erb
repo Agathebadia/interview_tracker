@@ -1,5 +1,14 @@
 <div class="job-application-form">
   <%= form_for(@job_application) do |f| %>
+   <% if @job_application.errors.any? %>
+      <div class="form-errors mb-4">
+        <ul>
+          <% @job_application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="form-halves">
 
       <div>

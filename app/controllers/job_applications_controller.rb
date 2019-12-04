@@ -33,7 +33,7 @@ class JobApplicationsController < ApplicationController
     end
   end
 
-def destroy
+  def destroy
     @job_application = JobApplication.find(params[:id])
     #authorize(@job_application)
     @job_application.destroy
