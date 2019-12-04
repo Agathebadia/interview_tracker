@@ -13,7 +13,7 @@ class InterviewsController < ApplicationController
     @interview = Interview.new(interview_params)
     @interview.job_application = @job_application
     if @interview.save
-      redirect_to @job_application
+      redirect_to profile_path(current_user)
     else
       render :new
     end
