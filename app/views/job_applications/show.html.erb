@@ -30,8 +30,21 @@
           <div class="details"><i>Recruiter's email</i><%= @job_application.recruiter_email %></div>
         </div>
 
-        <i class="impression">Your impression</i>
-        <p><%= @job_application.your_impression %></p>
+        <div class="imp-drop">
+          <div>
+            <i class="impression">Your impression</i>
+            <p><%= @job_application.your_impression %></p>
+          </div>
+          <div>
+            <div class="form-spacer">
+              <%= form_for(@job_application, remote: true) do |f| %>
+              <%= f.label :status %>
+              <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'], {:onchange => "this.form.submit();"}  %>
+              <%= f.submit class: "default-button" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
 
        <% if @interviews.exists? %>

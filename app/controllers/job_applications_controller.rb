@@ -7,6 +7,12 @@ class JobApplicationsController < ApplicationController
     @job_application = JobApplication.find(params[:id])
     @interviews = @job_application.interviews
     @interview = Interview.new
+    # 1 Respond to show.js.erb
+    respond_to do |format|
+      format.js
+      format.html { render 'job_applications/show'}
+    end
+
   end
 
   def create

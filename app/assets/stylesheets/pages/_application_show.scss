@@ -66,9 +66,15 @@ body {
         }
       }
 
+      .imp-drop {
+        display: grid;
+        grid-template-columns: 67% 33%;
+        grid-gap: 10px;
+        margin-top: 36px;
+      }
+
       .impression {
         display: block;
-        margin-top: 36px;
         font-size: 12px;
         text-transform: uppercase;
         font-style: normal;
