@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:new, :create, :edit, :update]
   get '/profile', to: 'profiles#show', as: :show_profiles
+  get '/profile_hired', to: 'profiles#hired', as: :hired_profiles
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmlr
 end

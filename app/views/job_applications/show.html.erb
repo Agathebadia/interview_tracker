@@ -7,9 +7,11 @@
           <h1><%= @job_application.company_name %></h1>
         </div>
         <div class="form-spacer-top-right" >
+          <% unless @job_application.status == 'Hired' %>
           <%= form_for(@job_application, remote: true) do |f| %>
             <%= f.label :status %>
             <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'], {:onchange => "this.form.submit();"}  %>
+          <% end %>
           <% end %>
         </div>
       </div>
@@ -17,7 +19,7 @@
 
       <span class="sub-titles actions">
         Your job application
-        <%= link_to "Hired!", show_profiles_path, class: 'hired' %>
+        <%= link_to "Hired!", show_profiles_path, class: 'hired', method: :hired %>
         <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
           <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>
           <% end %>

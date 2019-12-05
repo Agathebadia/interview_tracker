@@ -56,6 +56,12 @@ class ProfilesController < ApplicationController
     redirect_to show_profiles_path
   end
 
+  def hired
+    @job_application = job_application.find(job_application[:id])
+    @job_application.update(status: 'Hired')
+    redirect_to hired_profiles_path
+  end
+
 # Controller for the Dashboard
 
   private
