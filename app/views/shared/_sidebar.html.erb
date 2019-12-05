@@ -15,21 +15,15 @@
     </li>
     <li class='sidenav-link'>
       <li class="sidenav-link <%= 'active' if controller_name == 'profiles' && action_name == 'show' && params[:favorite] %> ">
-      <%= link_to show_profiles_path(current_user, favorite: 1) do %>
+      <%= link_to show_profiles_path(favorite: 1) do %>
         <i class="fas fa-heart"></i> Favorites
       <% end %>
     </li>
-    <% if controller_name == 'profiles' && action_name == 'new' %>
-      <li class="sidenav-link inactive">
-        <i class="fas fa-cog"></i> Settings
-      </li>
-    <% else %>
-      <li class="sidenav-link <%= 'active' if controller_name == 'profiles' && action_name == 'edit' %>">
+    <li class="sidenav-link <%= 'active' if controller_name == 'profiles' && action_name == 'edit' %>">
       <%= link_to edit_profile_path(current_user) do %>
         <i class="fas fa-cog"></i> Settings
       <% end %>
-      </li>
-    <% end %>
+    </li>
   </ul>
 
   <div class='logout'>
