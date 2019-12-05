@@ -3,7 +3,7 @@
     <span class="sub-titles">Your new application</span>
 
   <div class="job-application-form">
-  <%= form_for(@job_application) do |f| %>
+  <%= simple_form_for(@job_application) do |f| %>
    <% if @job_application.errors.any? %>
       <div class="form-errors mb-4">
         <ul>
