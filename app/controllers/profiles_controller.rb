@@ -11,6 +11,7 @@ class ProfilesController < ApplicationController
     with_interviews = @job_applications.joins(:interviews)
 
     # @upcoming_interviews = upcoming_range.select(:id).distinct
+    @hired = @job_applications.where("job_applications.status = 'Hired'")
     @upcoming_interviews = with_interviews.where("interviews.date < ? AND interviews.date > ?", 1.week.from_now, Time.now).uniq
     @with_interviews = with_interviews.where("interviews.date > ?", 1.week.from_now).where.not(id: @upcoming_interviews).uniq
     #@with_interviews.each do |job|
@@ -26,6 +27,10 @@ class ProfilesController < ApplicationController
     #@upcoming_interviews.interviews.order('date asc').first
 
     @no_interviews = @job_applications.left_outer_joins(:interviews).where(interviews: { job_application: nil })
+
+
+    # (@job_applications.status["Hired"]).uniq
+
   end
 
   def new
