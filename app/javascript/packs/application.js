@@ -21,4 +21,7 @@ var changeInterviewStatus = () => {
     data: appStatusInput.value
   })
 };
-appStatusInput.addEventListener("change", changeInterviewStatus);
+
+if (appStatusInput) {
+  appStatusInput.addEventListener("change", changeInterviewStatus);
+}

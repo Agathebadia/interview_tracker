@@ -48,6 +48,9 @@
     </div>
   </div>
 
+  <% @no_interviews = @no_interviews.reject { |interview| interview.status == "Hired" } %>
+  <% @with_interviews = @with_interviews.reject { |interview| interview.status == "Hired" } %>
+  <% @upcoming_interviews = @upcoming_interviews.reject { |interview| interview.status == "Hired" } %>
 
   <%= render 'applications', applications: @hired, title: 'You have been hired!!!' %>
   <%= render 'applications', applications: @upcoming_interviews, title: 'Your interview(s) in the upcoming days' %>
