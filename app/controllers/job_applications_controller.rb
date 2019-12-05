@@ -8,14 +8,13 @@ class JobApplicationsController < ApplicationController
     @interviews = @job_application.interviews
     @interview = Interview.new
     # 1 Respond to show.js.erb
+
     respond_to do |format|
-      format.js {
-        @job_application.status = params.keys.first
-        @job_application.save!
-      }
+      format.js { @job_application.status = params.keys.first }
       format.html { render 'job_applications/show'}
     end
 
+    @job_application.save!
   end
 
   def create
