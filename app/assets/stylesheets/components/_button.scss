@@ -12,6 +12,26 @@
   border-radius: 4px;
 }
 
+ .hired {
+    height: 40px;
+    padding: 10px 33px;
+    background: #8096e5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #788cd6;
+      color: white;
+    }
+  }
+
+
 .button-blue {
   background-color: #3D9AE2;
 }
