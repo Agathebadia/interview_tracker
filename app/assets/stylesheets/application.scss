@@ -28,11 +28,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 40vh;
 
-  img {
+  .circle {
+    background-color: white;
+    border-radius: 50%;
     width: 120px;
     height: 120px;
+
+    img {
+      align-self: center;
+      width: 120px;
+      height: 120px;
+    }
   }
 
   h1 {

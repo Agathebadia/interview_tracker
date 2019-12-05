@@ -81,7 +81,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #eaeaea;
+  background-color: white;
   padding-top: 30px;
   padding-bottom: 25px;
 }
@@ -107,4 +107,28 @@ form {
   position: absolute;
   left: 685px;
 }
+
+ul.application-list {
+  padding: 0;
+  margin: 40px auto;
+  padding: 0 30px 30px 30px;
+  margin: 0 5;
+  max-width: 866px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.form-first-name {
+
+}
+
+.form-errors > ul >li {
+  color: red;
+}
+
+
+
+
+
+
 

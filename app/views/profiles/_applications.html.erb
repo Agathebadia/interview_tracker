@@ -15,7 +15,7 @@
             <% if job_application.interviews.empty? %>
               <div class="nothing">No interviews yet.</div>
             <% elsif job_application.interviews.last.date < Date.today + 1.week %>
-              <div class="date"><%= job_application.interviews.last.date.strftime('%b %d, %Y at %l:%M %P') %></div>
+              <div class="date"><%= job_application.interviews.last.date.strftime('%d.%m.%y at %l:%M %P') %></div>
 
             <% elsif job_application.interviews.last.date > Date.today %>
               <div class="date"><%= job_application.interviews.last.date.strftime('%d.%m.%y at %l:%M %P') %></div>
@@ -36,7 +36,7 @@
             <% end %>
           </div>
 
-          <%= link_to 'Update', job_application_path(job_application), class: 'application-action' %>
+          <%= link_to 'Details', job_application_path(job_application), class: 'application-action' %>
         </div>
       </li>
     <% end %>

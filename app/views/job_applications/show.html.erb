@@ -4,6 +4,7 @@
     <div class="application-list">
       <h1><%= @job_application.company_name %></h1>
 
+
       <span class="sub-titles actions">
         Your job application
         <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
@@ -33,21 +34,20 @@
         <p><%= @job_application.your_impression %></p>
       </div>
 
+       <% if @interviews.exists? %>
+        <span class="sub-titles">Your interviews</span>
+        <div class="application-section">
+          <% @interviews.each do |interview| %>
+            <p>Date: <%= interview.date.strftime('%d.%m.%y at %l:%M %P') %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> - <%= interview.description %>
+            <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id), class: 'application-action' %>
+          <% end %>
+        </div>
+      <% end %>
 
       <span class="sub-titles">Add an interview</span>
       <div class="interview-form application-section">
         <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
       </div>
-
-      <% if @interviews.exists? %>
-        <span class="sub-titles">Your interviews</span>
-        <div class="application-section">
-          <% @interviews.each do |interview| %>
-            <p>Date: <%= interview.date %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> - <%= interview.description %>
-            <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id), class: 'application-action' %>
-          <% end %>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
