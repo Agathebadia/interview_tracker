@@ -10,3 +10,14 @@ flatpickr(".datepicker", {
   // dateFormat: "l-M-J-y-",
   altInput: true
 });
+
+var appStatusInput = document.querySelector('#job_application_status')
+var changeInterviewStatus = () => {
+  var appStatusInput = document.querySelector('#job_application_status')
+  Rails.ajax({
+    url: window.location.pathname,
+    type: "GET",
+    data: appStatusInput.value
+  })
+}
+appStatusInput.addEventListener("change", changeInterviewStatus);
