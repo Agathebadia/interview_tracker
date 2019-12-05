@@ -57,14 +57,20 @@ body {
           align-items: flex-start;
           width: 170px;
           font-size: 14px;
+          padding-bottom: 20px;
 
           i {
             font-size: 14px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             font-style: normal;
             color: #8096e5;
           }
         }
+      }
+
+      #dropdown-status {
+        margin: 0;
       }
 
       .impression {
@@ -73,6 +79,7 @@ body {
         text-transform: uppercase;
         font-style: normal;
         color: #8096e5;
+        padding-bottom: 8px;
       }
 
       .impression-content {

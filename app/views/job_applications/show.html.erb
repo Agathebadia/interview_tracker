@@ -39,6 +39,7 @@
         <div class="application-details">
           <div class="details"><i>Job title</i><%= @job_application.job_title %></div>
           <div class="details"><i>Application status</i>
+
             <%# unless @job_application.status == 'Hired' %>
               <p class="target"><%= @job_application.status %></p>
             <%# end %>
@@ -51,9 +52,6 @@
         <div>
           <i class="impression">Your impression</i>
           <p><%= @job_application.your_impression %></p>
-        </div>
-        <div>
-
         </div>
       </div>
 
