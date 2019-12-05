@@ -25,7 +25,7 @@
   </head>
 
   <body>
-    <div class="<%= 'wrapper' if !(controller_name == 'pages' && action_name == 'home') %>">
+    <div class="<%= 'wrapper' if !((controller_name == 'pages' && action_name == 'home') || (controller_name == 'profiles' && action_name == 'new')) %>">
       <% unless  params[:controller] == "pages" && params[:action] == "home" %>
         <% if current_user %> <%#= Show only sidebar if there is a current_user %>
           <% unless  params[:controller] == "profiles" && params[:action] == "new" %>
