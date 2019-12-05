@@ -2,7 +2,17 @@
 <div class="content">
   <div class="job-application">
     <div class="application-list">
-      <h1><%= @job_application.company_name %></h1>
+      <div class="name-drop">
+        <div>
+          <h1><%= @job_application.company_name %></h1>
+        </div>
+        <div class="form-spacer">
+          <%= form_for(@job_application, remote: true) do |f| %>
+            <%= f.label :status %>
+            <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'], {:onchange => "this.form.submit();"}  %>
+          <% end %>
+        </div>
+      </div>
 
 
       <span class="sub-titles actions">
@@ -30,21 +40,16 @@
           <div class="details"><i>Recruiter's email</i><%= @job_application.recruiter_email %></div>
         </div>
 
-        <div class="imp-drop">
+
           <div>
             <i class="impression">Your impression</i>
             <p><%= @job_application.your_impression %></p>
           </div>
           <div>
-            <div class="form-spacer">
-              <%= form_for(@job_application, remote: true) do |f| %>
-              <%= f.label :status %>
-              <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'], {:onchange => "this.form.submit();"}  %>
-              <% end %>
-            </div>
+
           </div>
         </div>
-      </div>
+
 
        <% if @interviews.exists? %>
         <span class="sub-titles">Your interviews</span>
