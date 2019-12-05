@@ -1,4 +1,9 @@
 
-var target = document.querySelector(".target")
-target.innerHTML = "<%= @job_application.status %>"
+<% if ["Hired", "Closed", "Offer"].include? @job_application.status %>
+  window.location.href = "<%= show_profiles_path %>"
+<% else %>
+  var target = document.querySelector(".target")
+  target.innerHTML = "<%= @job_application.status %>"
+<% end %>
+
 

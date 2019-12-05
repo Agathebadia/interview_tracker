@@ -39,7 +39,11 @@
         <div class="application-details">
           <div class="details"><i>Job title</i><%= @job_application.job_title %></div>
           <div class="details"><i>Application status</i>
-            <p id="dropdown-status"><%= @job_application.status %></p></div>
+
+            <%# unless @job_application.status == 'Hired' %>
+              <p class="target"><%= @job_application.status %></p>
+            <%# end %>
+          </div>
           <div class="details"><i>Recruiter's name</i><%= @job_application.recruiter_name %></div>
           <div class="details"><i>Recruiter's email</i><%= @job_application.recruiter_email %></div>
         </div>
