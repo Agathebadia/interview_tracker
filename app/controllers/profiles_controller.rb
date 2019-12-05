@@ -13,18 +13,6 @@ class ProfilesController < ApplicationController
     # @upcoming_interviews = upcoming_range.select(:id).distinct
     @upcoming_interviews = with_interviews.where("interviews.date < ? AND interviews.date > ?", 1.week.from_now, Time.now).uniq
     @with_interviews = with_interviews.where("interviews.date > ?", 1.week.from_now).where.not(id: @upcoming_interviews).uniq
-    #@with_interviews.each do |job|
-      #if upcoming_range.include?(job.interviews.order('date asc').first.date.to_date)
-        #@upcoming_interviews
-      #end
-    #end
-
-    # remove duplicates from upcoming job applications
-    #@with_interviews.uniq
-
-    #order interviews from job app by date and select closest one
-    #@upcoming_interviews.interviews.order('date asc').first
-
     @no_interviews = @job_applications.left_outer_joins(:interviews).where(interviews: { job_application: nil })
   end
 
