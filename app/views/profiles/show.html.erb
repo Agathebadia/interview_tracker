@@ -6,42 +6,42 @@
       <ul class="nav nav-pills">
         <li class="nav-item">
           <%= link_to show_profiles_path, class:"nav-link #{active if !params[:status]}" do %>
-            All <span class="app-count"><%= JobApplication.all.count %></span>
+            All <span class="app-count"><%= JobApplication.where(user: current_user).count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Applied'), class:"nav-link #{active if params[:status] == 'Applied'}" do %>
-            Applied <span class="app-count"><%= JobApplication.all.where(status: 'Applied').count %></span>
+            Applied <span class="app-count"><%= JobApplication.all.where(user: current_user, status: 'Applied').count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Interviewing'), class:"nav-link #{active if params[:status] == 'Interviewing'}" do %>
-            Interviewing <span class="app-count"><%= JobApplication.all.where(status: 'Interviewing').count %></span>
+            Interviewing <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Interviewing').count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Assignment'), class:"nav-link #{active if params[:status] == 'Assignment'}" do %>
-            Assignment <span class="app-count"><%= JobApplication.all.where(status: 'Assignment').count %></span>
+            Assignment <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Assignment').count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Final interview'), class:"nav-link #{active if params[:status] == 'Final interview'}" do %>
-            Final interview <span class="app-count"><%= JobApplication.all.where(status: 'Final interview').count %></span>
+            Final interview <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Final interview').count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Offer'), class:"nav-link #{active if params[:status] == 'Offer'}" do %>
-            Offer <span class="app-count"><%= JobApplication.all.where(status: 'Offer').count %></span>
+            Offer <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Offer').count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Hired'), class:"nav-link #{active if params[:status] == 'Hired'}" do %>
-            Hired <span class="app-count"><%= JobApplication.all.where(status: 'Hired').count %></span>
+            Hired <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Hired').count %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to show_profiles_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" do %>
-            Closed <span class="app-count"><%= JobApplication.all.where(status: 'Closed').count %></span>
+            Closed <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Closed').count %></span>
           <% end %>
         </li>
       </ul>
