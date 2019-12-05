@@ -28,7 +28,9 @@
     <div class="<%= 'wrapper' if !(controller_name == 'pages' && action_name == 'home') %>">
       <% unless  params[:controller] == "pages" && params[:action] == "home" %>
         <% if current_user %> <%#= Show only sidebar if there is a current_user %>
-          <%= render 'shared/sidebar' %>
+          <% unless  params[:controller] == "profiles" && params[:action] == "new" %>
+            <%= render 'shared/sidebar' %>
+          <% end %>
         <% end %>
       <% end %>
       <%= render 'shared/flashes' %>

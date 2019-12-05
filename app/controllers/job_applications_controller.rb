@@ -27,7 +27,7 @@ class JobApplicationsController < ApplicationController
     @job_application = JobApplication.find(params[:id])
     @job_application.update(job_application_params)
     if @job_application.save!
-      redirect_to show_profiles_path(current_user)
+      redirect_to show_profiles_path
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class JobApplicationsController < ApplicationController
     @job_application = JobApplication.find(params[:id])
     #authorize(@job_application)
     @job_application.destroy
-    redirect_to show_profiles_path(current_user)
+    redirect_to show_profiles_path
   end
 
   private

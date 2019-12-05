@@ -9,9 +9,8 @@ Rails.application.routes.draw do
     patch :toggle_favorite, controller:   :favorites
   end
 
-  resources :profiles, only: [:create, :edit, :update]
-    get '/profiles', to: 'profiles#show', as: :show_profiles
-    get '/profiles', to: 'profiles#new', as: :new_profile
+  resources :profiles, only: [:new, :create, :edit, :update]
+  get '/profile', to: 'profiles#show', as: :show_profiles
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmlr
 end

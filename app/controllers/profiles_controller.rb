@@ -32,7 +32,6 @@ class ProfilesController < ApplicationController
     @profile = Profile.new
     #@first_name = first_name.new
     #@last_name = last_name.new
-    redirect_to show_profiles_path(current_user)
   end
 
   def create
