@@ -1,4 +1,3 @@
-
 <div class="content">
   <div class="job-application">
     <div class="application-list">
@@ -6,21 +5,22 @@
         <div>
           <h1><%= @job_application.company_name %></h1>
         </div>
-        <div class="form-spacer-top-right" >
-          <% unless @job_application.status == 'Hired' %>
-          <%= form_for(@job_application, remote: true) do |f| %>
-            <%= f.label :status %>
-            <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'], {:onchange => "this.form.submit();"}  %>
-          <% end %>
-          <% end %>
-        </div>
       </div>
 
 
       <span class="sub-titles actions">
         Your job application
 
-        <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
+        <span class="form-spacer-top-middle">
+          <% unless @job_application.status == 'Hired' %>
+            <%= form_for(@job_application, remote: true) do |f| %>
+              <%= f.label :status %>
+              <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'], {:onchange => "this.form.submit();"} %>
+            <% end %>
+          <% end %>
+        </span>
+
+        <span class="card-application-icons" id="<%= dom_id(@job_application) %>">
           <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>
           <% end %>
           <%= link_to job_application_toggle_favorite_path(@job_application), method: :patch, remote: true do %>
@@ -33,40 +33,42 @@
           <%= link_to job_application_path(@job_application), method: "delete" do %>
           <i class="fas fa-trash-alt" id="bin"></i>
           <% end %>
-        </div>
+        </span>
       </span>
       <div class="application-section">
         <div class="application-details">
           <div class="details"><i>Job title</i><%= @job_application.job_title %></div>
-          <div class="details"><i>Application status</i><p class="target"><%= @job_application.status %></p></div>
+          <div class="details"><i>Application status</i>
+            <p class="target"><%= @job_application.status %></p></div>
           <div class="details"><i>Recruiter's name</i><%= @job_application.recruiter_name %></div>
           <div class="details"><i>Recruiter's email</i><%= @job_application.recruiter_email %></div>
         </div>
 
 
-          <div>
-            <i class="impression">Your impression</i>
-            <p><%= @job_application.your_impression %></p>
-          </div>
-          <div>
-
-          </div>
+        <div>
+          <i class="impression">Your impression</i>
+          <p><%= @job_application.your_impression %></p>
         </div>
+        <div>
+
+        </div>
+      </div>
 
 
-       <% if @interviews.exists? %>
+      <% if @interviews.exists? %>
         <span class="sub-titles">Your interviews</span>
         <div class="application-section">
           <% @interviews.each do |interview| %>
-            <p>Date: <%= interview.date.strftime('%d.%m.%y at %l:%M %P') %> with <%= interview.interviewer_name %> <%= interview.interviewer_email %> - <%= interview.description %>
-            <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id), class: 'application-action' %>
+            <p>Date: <%= interview.date.strftime('%d.%m.%y at %l:%M %P') %>
+              with <%= interview.interviewer_name %> <%= interview.interviewer_email %> - <%= interview.description %>
+              <%= link_to "Edit", edit_job_application_interview_path(job_application_id: params[:id], interview_id: interview.id), class: 'application-action' %>
           <% end %>
         </div>
       <% end %>
 
       <span class="sub-titles">Add an interview</span>
       <div class="interview-form application-section">
-        <%= render  './interviews/form', job_application: @job_application, interview: @interview  %>
+        <%= render './interviews/form', job_application: @job_application, interview: @interview %>
       </div>
     </div>
   </div>
