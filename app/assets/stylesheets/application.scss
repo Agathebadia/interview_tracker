@@ -16,11 +16,6 @@
 .wrapper {
   display: grid;
   grid-template-columns:  1fr 5fr;
-  height: 100vh;
-
-  .sidenav {
-    background-color: #FFFFFF;
-  }
 }
 
 .home {
