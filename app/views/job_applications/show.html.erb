@@ -17,7 +17,7 @@
 
       <span class="sub-titles actions">
         Your job application
-        <a href="" class="hired">Hired!</a>
+        <%= link_to "Hired!", show_profiles_path, class: 'hired' %>
         <div class="card-application-icons" id="<%= dom_id(@job_application) %>">
           <%= link_to edit_job_application_path do %><i class="far fa-edit" id="edit-icon"></i>
           <% end %>
