@@ -11,14 +11,6 @@ flatpickr(".datepicker", {
   altInput: true
 });
 
-flatpickr(".datepicker", {
-    disable: [
-        {
-            from: "2000-01-01",
-            to: Date.today.prev_day
-        },
-    ]
-});
 
 var appStatusInput = document.querySelector('#job_application_status')
 var changeInterviewStatus = () => {
