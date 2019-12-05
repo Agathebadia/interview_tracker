@@ -1,0 +1,11 @@
+.app-count {
+  //border: 1px solid #8096e5;
+  // border-radius: 50%;
+  //color: red;
+  position:relative;
+  font-size: 14px;
+  top:-10px;
+  &:hover {
+    border: 0px solid white;
+  }
+}
