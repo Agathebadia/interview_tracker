@@ -36,7 +36,7 @@ class JobApplicationsController < ApplicationController
   def destroy
     @job_application = JobApplication.find(params[:id])
     #authorize(@job_application)
-    @job_application.destroy
+    @job_application.destroy!
     redirect_to show_profiles_path(current_user)
   end
 
