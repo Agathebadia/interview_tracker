@@ -49,6 +49,7 @@
   </div>
 
 
+  <%= render 'applications', applications: @hired, title: 'You have been hired!!!' %>
   <%= render 'applications', applications: @upcoming_interviews, title: 'Your interview(s) in the upcoming days' %>
   <%= render 'applications', applications: @with_interviews, title: 'Your scheduled interview(s)' %>
   <%= render 'applications', applications: @no_interviews, title: 'No interview planned' %>
