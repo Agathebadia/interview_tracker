@@ -1,7 +1,53 @@
 <div class='main-container content'>
   <ul class="application-list">
     <span class="sub-titles">Your new application</span>
-    <%= render 'form', job_application: @job_application %>
+
+  <div class="job-application-form">
+  <%= form_for(@job_application) do |f| %>
+   <% if @job_application.errors.any? %>
+      <div class="form-errors mb-4">
+        <ul>
+          <% @job_application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-halves">
+
+      <div>
+        <%= f.label :job_title %>
+        <%= f.text_field :job_title %>
+      </div>
+
+      <div>
+        <%= f.label :company_name %>
+        <%= f.text_field :company_name %>
+      </div>
+
+      <div>
+        <%= f.label :recruiter_name %>
+        <%= f.text_field :recruiter_name %>
+      </div>
+
+      <div>
+        <%= f.label :recruiter_email %>
+        <%= f.text_field :recruiter_email %>
+      </div>
+    </div>
+
+    <!-- <div class="form-spacer">
+      <%#= f.label :status %>
+      <%#= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'] %>
+    </div> -->
+    <div>
+      <br>
+      <br>
+    <%= f.submit class: "default-button" %>
+    </div>
+  <% end %>
+</div>
+
   </div>
 </div>
 
