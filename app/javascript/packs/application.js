@@ -19,5 +19,5 @@ var changeInterviewStatus = () => {
     type: "GET",
     data: appStatusInput.value
   })
-}
+};
 appStatusInput.addEventListener("change", changeInterviewStatus);
