@@ -37,6 +37,12 @@
       <%= f.select :status, ['Applied', 'Interviewing', 'Assignment', 'Final interview', 'Offer', 'Hired', 'Closed'] %>
     </div>
 
+    <% hidden_field(:your_impression, :text_area) %>
+    <div class="form-spacer">
+      <%= f.label :your_impression %>
+      <%= f.text_area :your_impression %>
+
+    </div>
 
     <%= f.submit class: "default-button" %>
   <% end %>
