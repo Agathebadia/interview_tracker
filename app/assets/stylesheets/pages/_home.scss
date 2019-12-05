@@ -2,7 +2,6 @@
 .banner {
   background-image: asset-url("homepage-banner_edit.png");
   background-position: top;
-  // background-image: url("https://source.unsplash.com/1000x500/?office,work");
   background-size: cover;
   color: #000000  ;
   padding: 0px 0;
@@ -83,10 +82,6 @@
   padding-left: 120px;
   // line-height: 35px;
 }
-
-// #description-h2 {
-//   padding-left: 120px;
-// }
 
 /* Media queries */
 @media(max-width: 992px) {
