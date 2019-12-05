@@ -1,15 +1,4 @@
 
-// function 1 AJAX request to post changed form status to database
-function postStatus() {
-  // Select the form with the different option
-  // Add event listener to listen for changes
-  // AJAX fetch post request, post update the database
-  //Run function 2, pass the new status through as argument
-}
-
-// function 2 Update job application status on show page
-function updateStatus(innerHtml) {
-  // Select the div with the job application status
-  // innerHTML changed to whatever the new status is in the database
-}
+var target = document.querySelector(".target")
+target.innerHTML = "<%= @job_application.status %>"
 
