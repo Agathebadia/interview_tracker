@@ -52,10 +52,13 @@
   <% @with_interviews = @with_interviews.reject { |interview| interview.status == "Hired" } %>
   <% @upcoming_interviews = @upcoming_interviews.reject { |interview| interview.status == "Hired" } %>
 
-  <%= render 'applications', applications: @hired, title: 'You have been hired!!!' %>
-  <%= render 'applications', applications: @upcoming_interviews, title: 'Your interview(s) in the upcoming days' %>
-  <%= render 'applications', applications: @with_interviews, title: 'Your scheduled interview(s)' %>
-  <%= render 'applications', applications: @no_interviews, title: 'No interview planned' %>
+
+
+  <%= render 'applications', applications: @hired, title: 'You have been hired!!! 🎉', styles: "font-size: 20px;
+  color: #FFB865; text-shadow: 1px 1px #8096E5"; %>
+  <%= render 'applications', applications: @upcoming_interviews, title: 'Your interview(s) in the upcoming days',styles: ""%>
+  <%= render 'applications', applications: @with_interviews, title: 'Your scheduled interview(s)',  styles: ""%>
+  <%= render 'applications', applications: @no_interviews, title: 'No interview planned', styles: "" %>
 </div>
 
 
