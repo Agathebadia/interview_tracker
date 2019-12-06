@@ -1,6 +1,6 @@
 <% if applications.any? %>
   <div class="application-list">
-    <span class="sub-titles"><%= title %></span>
+    <span class="sub-titles" style="<%= styles %>"><%= title %></span>
 
     <% applications.each do |job_application| %>
       <li class="application">
