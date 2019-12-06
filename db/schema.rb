@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_01_135800) do
+ActiveRecord::Schema.define(version: 2019_12_05_204914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_12_01_135800) do
   end
 
   create_table "job_applications", force: :cascade do |t|
-    t.string "status"
+    t.string "status", default: "Applied"
     t.bigint "user_id"
     t.string "job_title"
     t.string "company_name"
