@@ -39,11 +39,6 @@
             Hired <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Hired').count %></span>
           <% end %>
         </li>
-        <li class="nav-item">
-          <%= link_to show_profiles_path(status: 'Closed'), class:"nav-link #{active if params[:status] == 'Closed'}" do %>
-            Closed <span class="app-count"><%= JobApplication.all.where(user: current_user,status: 'Closed').count %></span>
-          <% end %>
-        </li>
       </ul>
     </div>
   </div>
